@@ -1,54 +1,46 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using iTextSharp.text;
 
-namespace PdfBuilder.Builders
+namespace PdfBuilder
 {
     /// <summary>
-    /// Class that wraps the Paragraph class in iTextSharp
+    /// Wrapper around and underlying instance of T where T is the type of iTextSharp instance
     /// </summary>
-    public class ParagraphBuilder
+    public class Builder<T>
     {
-        private Paragraph Paragraph { get; set; }
-
-        public string Text { get; private set; }
+        public T Instance { get; set; }
 
         /// <summary>
-        /// Instantiate a ParagraphBuilder instance
+        /// Default constructor. The underlying iTextSharp instance is attempted to be created using
+        /// its default constructor.
         /// </summary>
-        /// <param name="text">Paragraph text <see cref="Sytem.String"/></param>
-        public ParagraphBuilder(string text)
+        public Builder()
         {
-            this.Text = text;
-            this.Paragraph = new Paragraph(this.Text);
+            if (typeof(T).GetConstructor(System.Reflection.BindingFlags.Default, null, Type.EmptyTypes, new ParameterModifier[0]) != null)
+            {
+                this.Instance = Activator.CreateInstance<T>();
+            }
         }
 
         /// <summary>
-        /// Default constructor. The paragraph text has not been set
+        /// Constructor with instance of T.
         /// </summary>
-        public ParagraphBuilder()
+        /// <param name="instance"></param>
+        public Builder(T instance)
         {
-            this.Paragraph = new Paragraph();
+            this.Instance = instance;
         }
 
-        /// <summary>
-        /// Set the paragraph text
-        /// </summary>
-        /// <param name="text">Paragraph text <see cref="System.String"/></param>
-        /// <returns>ParagraphBuilder <see cref="PdfBuilder.Builders.ParagraphBuilder"/> instance</returns>
-        public ParagraphBuilder SetText(string text)
-        {
-            this.Text = text;
-            return this;
-        }
 
         /// <summary>
-        /// Set properties for the paragraph
+        /// Set properties for the underlying instance
         /// </summary>
-        /// <param name="cb">Callback to execute when rendering this paragraph instance <see cref="Action{T}"/></param>
+        /// <param name="cb">Callback to execute to set properties of the underlying instance <see cref="Action{T}"/></param>
         /// <typeparam name="T"><see cref="iTextSharp.text.Paragraph"/></typeparam>
         /// <code>
         /// To format the paragraph:
@@ -59,10 +51,10 @@ namespace PdfBuilder.Builders
         ///         p.FontSize = 12;
         ///     });
         /// </code>
-        /// <returns>ParagraphBuilder <see cref="PdfBuilder.Builders.ParagraphBuilder"/> instance</returns>
-        public ParagraphBuilder Set(Action<Paragraph> cb)
+        /// <returns>Builder{T} <see cref="PdfBuilder.Builder{T}/> instance</returns>
+        public Builder<T> Set(Action<T> cb)
         {
-            cb(this.Paragraph);
+            cb(this.Instance);
             return this;
         }
 
@@ -82,9 +74,9 @@ namespace PdfBuilder.Builders
         /// 
         /// </code>
         /// <returns><see cref="System.Object"/></returns>
-        public object Read(Func<Paragraph, object> cb)
+        public object ReadProperty(Func<T, object> cb)
         {
-            return cb(this.Paragraph);
+            return cb(this.Instance);
         }
     }
 }

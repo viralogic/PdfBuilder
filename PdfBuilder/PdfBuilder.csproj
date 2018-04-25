@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Builders\ImageBuilder.cs" />
-    <Compile Include="Builders\ParagraphBuilder.cs" />
+    <Compile Include="Builder.cs" />
     <Compile Include="PdfBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
