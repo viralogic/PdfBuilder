@@ -21,9 +21,22 @@ namespace PdfBuilder
         /// </summary>
         public Builder()
         {
-            if (typeof(T).GetConstructor(System.Reflection.BindingFlags.Default, null, Type.EmptyTypes, new ParameterModifier[0]) != null)
+            if (typeof(T).GetConstructor(Type.EmptyTypes) != null)
             {
                 this.Instance = Activator.CreateInstance<T>();
+            }
+        }
+
+        /// <summary>
+        /// Constructor with parameters
+        /// </summary>
+        /// <param name="p"><see cref="System.Array{Object}"/></param>
+        public Builder(params object[] p)
+        {
+            var underlyingTypes = p.Select(x => x.GetType().UnderlyingSystemType).ToArray();
+            if (typeof(T).GetConstructor(underlyingTypes) != null)
+            {
+                this.Instance = (T)Activator.CreateInstance(typeof(T), p);
             }
         }
 
