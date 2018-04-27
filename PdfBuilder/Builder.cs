@@ -38,12 +38,14 @@ namespace PdfBuilder
             {
                 this.Instance = (T)Activator.CreateInstance(typeof(T), p);
             }
+            throw new TargetInvocationException(new Exception(
+                string.Format(
+                    "Cannot find constructor for type {0} with parameters {1}",
+                    typeof(T).ToString(), String.Join(", ", underlyingTypes.Select(t => t.ToString()))
+                )));
         }
 
-        /// <summary>
-        /// Constructor with instance of T.
-        /// </summary>
-        /// <param name="instance"></param>
+
         public Builder(T instance)
         {
             this.Instance = instance;
@@ -51,14 +53,14 @@ namespace PdfBuilder
 
 
         /// <summary>
-        /// Set properties for the underlying instance
+        /// Execute an action on T
         /// </summary>
         /// <param name="cb">Callback to execute to set properties of the underlying instance <see cref="Action{T}"/></param>
-        /// <typeparam name="T"><see cref="iTextSharp.text.Paragraph"/></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <code>
-        /// To format the paragraph:
+        /// To set properties or perform actions:
         /// 
-        /// var builder = new ParagraphBuilder("Some text");
+        /// var builder = new Builder{Paragraph}("Some text");
         /// builder.Set(p =>
         ///     {
         ///         p.FontSize = 12;
@@ -72,15 +74,15 @@ namespace PdfBuilder
         }
 
         /// <summary>
-        /// Read properties of the paragraph
+        /// Read properties of T
         /// </summary>
-        /// <param name="cb">Callback to execute to read the paragraph property <see cref="Func{T, TResult}"/></param>
+        /// <param name="cb">Callback to execute on T <see cref="Func{T, TResult}"/></param>
         /// <typeparam name="T"><see cref="iTextSharp.text.Paragraph"/></typeparam>
-        /// <typeparam name="TResult"><see cref="System.Object"/></typeparam>
+        /// <typeparam name="TResult"></typeparam>
         /// <code>
-        /// To return a value from the underlying iTextSharp Paragraph:
+        /// To return a value from T:
         /// 
-        /// var builder = new ParagraphBuilder("Some text");
+        /// var builder = new Builder{Paragraph}("Some text");
         /// return (string)builder.Read(p => p.Content); // Returns "Some text"
         /// 
         /// Please note how the value obtained by the Read method will need to be explicitly cast into appropriate type
