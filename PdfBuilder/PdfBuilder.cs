@@ -1,63 +1,65 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Web;
-//using System.IO;
-//using iTextSharp.text;
-//using iTextSharp.text.pdf;
-//using iTextSharp.text.html.simpleparser;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html.simpleparser;
+using PdfBuilder.Interfaces;
 
-//namespace PHI_Umbraco_Components.Templating
-//{
+namespace PdfBuilder
+{
 
-//    public class ImageBuilder
-//    {
-//        public string LogoFilePath { get; private set; }
-//        public int Alignment { get; private set; }
+    public class PdfBuilder : Builder<Document>, IDisposable
+    {
+        private bool _disposed = false;
 
-//        public float ScalePercent { get; private set; }
+        /// <summary>
+        /// Instantiates a PdfBuilder instance from a page size
+        /// </summary>
+        /// <param name="pageSize">Rectangle that gives the size of page<see cref="iTextSharp.text.Rectangle"/></param>
+        public PdfBuilder(Rectangle pageSize)
+        {
+            this.Instance = new Document(pageSize);
+        }
 
-//        public ImageBuilder(string filePath)
-//            : this(filePath, Image.ALIGN_TOP | Image.ALIGN_LEFT, 100)
-//        {
+        /// <summary>
+        /// Renders content on the page using a renderer instance
+        /// </summary>
+        /// <param name="renderer">Instance of object that implements of IPdfRenderer interface</param>
+        /// <param name="stream">Stream instance used to write pdf text to <see cref="System.IO.Stream"/></param>
+        public void GeneratePdf(IPdfRenderer renderer, Stream stream)
+        {
+            renderer.RenderPdf(this);
+        }
 
-//        }
+        /// <summary>
+        /// Disposes the underlying document object
+        /// </summary>
+        /// <param name="disposing">boolean to represent if the document object has been disposed <see cref="System.Boolean"/></param>
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this._disposed)
+            {
+                if (disposing)
+                {
+                    this.Instance.Dispose();
+                }
 
-//        public ImageBuilder(string filePath, int alignment)
-//            : this(filePath, alignment, 100)
-//        {
+                this._disposed = true;
+            }
+        }
 
-//        }
-
-//        public ImageBuilder(string filePath, int alignment, float scale)
-//        {
-//            this.LogoFilePath = filePath;
-//            this.Alignment = alignment;
-//            this.ScalePercent = scale;
-//        }
-
-//        /// <summary>
-//        /// Set alignment for image.
-//        /// </summary>
-//        /// <param name="alignment">iTextSharp Alignment constant</param>
-//        /// <returns></returns>
-//        public ImageBuilder Align(int alignment)
-//        {
-//            this.Alignment = alignment;
-//            return this;
-//        }
-
-//        /// <summary>
-//        /// Scale image
-//        /// </summary>
-//        /// <param name="scale">float representing percent scale</param>
-//        /// <returns></returns>
-//        public ImageBuilder Scale(float scale)
-//        {
-//            this.ScalePercent = scale;
-//            return this;
-//        }
-//    }
+        /// <summary>
+        /// The dispose method to call
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+    }
 
 //    public class PdfBuilder
 //    {
@@ -183,4 +185,4 @@
 //            }
 //        }
 //    }
-//}
+}

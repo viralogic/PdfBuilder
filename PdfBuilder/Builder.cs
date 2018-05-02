@@ -38,11 +38,14 @@ namespace PdfBuilder
             {
                 this.Instance = (T)Activator.CreateInstance(typeof(T), p);
             }
-            throw new TargetInvocationException(new Exception(
+            else
+            {
+                throw new TargetInvocationException(new Exception(
                 string.Format(
                     "Cannot find constructor for type {0} with parameters {1}",
                     typeof(T).ToString(), String.Join(", ", underlyingTypes.Select(t => t.ToString()))
                 )));
+            }
         }
 
 

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Builder.cs" />
     <Compile Include="ImageBuilder.cs" />
+    <Compile Include="Interfaces\IPdfRenderer.cs" />
     <Compile Include="PdfBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
