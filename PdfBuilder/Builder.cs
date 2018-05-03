@@ -28,9 +28,9 @@ namespace PdfBuilder
         }
 
         /// <summary>
-        /// Constructor with parameters
+        /// Constructor with parameters for instantiating instance of <typeparamref name="T"/>
         /// </summary>
-        /// <param name="p"><see cref="System.Array{Object}"/></param>
+        /// <param name="p"><see cref="System.Array"/>An array of objects used as constructor parameters</param>
         public Builder(params object[] p)
         {
             var underlyingTypes = p.Select(x => x.GetType().UnderlyingSystemType).ToArray();
@@ -48,7 +48,10 @@ namespace PdfBuilder
             }
         }
 
-
+        /// <summary>
+        /// Constructor from an instance of <typeparamref name="T"/>
+        /// </summary>
+        /// <param name="instance"><typeparamref name="T"/> instance</param>
         public Builder(T instance)
         {
             this.Instance = instance;
@@ -58,18 +61,20 @@ namespace PdfBuilder
         /// <summary>
         /// Execute an action on T
         /// </summary>
-        /// <param name="cb">Callback to execute to set properties of the underlying instance <see cref="Action{T}"/></param>
+        /// <param name="cb">Callback to execute to set properties of the underlying instance <see cref="System.Action{T}"/></param>
         /// <typeparam name="T"></typeparam>
+        /// <returns><see cref="Builder{T}"/> instance</returns>
+        /// <example>
         /// <code>
         /// To set properties or perform actions:
         /// 
-        /// var builder = new Builder{Paragraph}("Some text");
+        /// var builder = new Builder<![CDATA[<Paragraph>]]>("Some text");
         /// builder.Set(p =>
         ///     {
-        ///         p.FontSize = 12;
+        ///         p.FontSize = 12; // The font size for the paragraph has been set to 12
         ///     });
         /// </code>
-        /// <returns>Builder{T} <see cref="PdfBuilder.Builder{T}/> instance</returns>
+        /// </example>
         public Builder<T> Set(Action<T> cb)
         {
             cb(this.Instance);
@@ -80,18 +85,17 @@ namespace PdfBuilder
         /// Read properties of T
         /// </summary>
         /// <param name="cb">Callback to execute on T <see cref="Func{T, TResult}"/></param>
-        /// <typeparam name="T"><see cref="iTextSharp.text.Paragraph"/></typeparam>
+        /// <typeparam name="T"></typeparam>
         /// <typeparam name="TResult"></typeparam>
+        /// <returns><see cref="System.Object"/>An instance of an object. Please note that this object will need to explicitly cast into appropriate type</returns>
+        /// <example>
         /// <code>
         /// To return a value from T:
         /// 
-        /// var builder = new Builder{Paragraph}("Some text");
+        /// var builder = new Builder<![CDATA[<Paragraph>]]>("Some text");
         /// return (string)builder.Read(p => p.Content); // Returns "Some text"
-        /// 
-        /// Please note how the value obtained by the Read method will need to be explicitly cast into appropriate type
-        /// 
         /// </code>
-        /// <returns><see cref="System.Object"/></returns>
+        /// </example>
         public object ReadProperty(Func<T, object> cb)
         {
             return cb(this.Instance);

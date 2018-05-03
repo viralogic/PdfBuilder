@@ -1,0 +1,200 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: PdfBuilder
+  name: PdfBuilder
+  href: api/PdfBuilder.html
+  commentId: N:PdfBuilder
+  fullName: PdfBuilder
+  nameWithType: PdfBuilder
+- uid: PdfBuilder.Builder`1
+  name: Builder<T>
+  href: api/PdfBuilder.Builder-1.html
+  commentId: T:PdfBuilder.Builder`1
+  name.vb: Builder(Of T)
+  fullName: PdfBuilder.Builder<T>
+  fullName.vb: PdfBuilder.Builder(Of T)
+  nameWithType: Builder<T>
+  nameWithType.vb: Builder(Of T)
+- uid: PdfBuilder.Builder`1.#ctor
+  name: Builder()
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1__ctor
+  commentId: M:PdfBuilder.Builder`1.#ctor
+  fullName: PdfBuilder.Builder<T>.Builder()
+  fullName.vb: PdfBuilder.Builder(Of T).Builder()
+  nameWithType: Builder<T>.Builder()
+  nameWithType.vb: Builder(Of T).Builder()
+- uid: PdfBuilder.Builder`1.#ctor(`0)
+  name: Builder(T)
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1__ctor__0_
+  commentId: M:PdfBuilder.Builder`1.#ctor(`0)
+  fullName: PdfBuilder.Builder<T>.Builder(T)
+  fullName.vb: PdfBuilder.Builder(Of T).Builder(T)
+  nameWithType: Builder<T>.Builder(T)
+  nameWithType.vb: Builder(Of T).Builder(T)
+- uid: PdfBuilder.Builder`1.#ctor(System.Object[])
+  name: Builder(Object[])
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1__ctor_System_Object___
+  commentId: M:PdfBuilder.Builder`1.#ctor(System.Object[])
+  name.vb: Builder(Object())
+  fullName: PdfBuilder.Builder<T>.Builder(System.Object[])
+  fullName.vb: PdfBuilder.Builder(Of T).Builder(System.Object())
+  nameWithType: Builder<T>.Builder(Object[])
+  nameWithType.vb: Builder(Of T).Builder(Object())
+- uid: PdfBuilder.Builder`1.#ctor*
+  name: Builder
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1__ctor_
+  commentId: Overload:PdfBuilder.Builder`1.#ctor
+  isSpec: "True"
+  fullName: PdfBuilder.Builder<T>.Builder
+  fullName.vb: PdfBuilder.Builder(Of T).Builder
+  nameWithType: Builder<T>.Builder
+  nameWithType.vb: Builder(Of T).Builder
+- uid: PdfBuilder.Builder`1.Instance
+  name: Instance
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Instance
+  commentId: P:PdfBuilder.Builder`1.Instance
+  fullName: PdfBuilder.Builder<T>.Instance
+  fullName.vb: PdfBuilder.Builder(Of T).Instance
+  nameWithType: Builder<T>.Instance
+  nameWithType.vb: Builder(Of T).Instance
+- uid: PdfBuilder.Builder`1.Instance*
+  name: Instance
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Instance_
+  commentId: Overload:PdfBuilder.Builder`1.Instance
+  isSpec: "True"
+  fullName: PdfBuilder.Builder<T>.Instance
+  fullName.vb: PdfBuilder.Builder(Of T).Instance
+  nameWithType: Builder<T>.Instance
+  nameWithType.vb: Builder(Of T).Instance
+- uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  name: ReadProperty(Func<T, Object>)
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_ReadProperty_System_Func__0_System_Object__
+  commentId: M:PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  name.vb: ReadProperty(Func(Of T, Object))
+  fullName: PdfBuilder.Builder<T>.ReadProperty(System.Func<T, System.Object>)
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(System.Func(Of T, System.Object))
+  nameWithType: Builder<T>.ReadProperty(Func<T, Object>)
+  nameWithType.vb: Builder(Of T).ReadProperty(Func(Of T, Object))
+- uid: PdfBuilder.Builder`1.ReadProperty*
+  name: ReadProperty
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_ReadProperty_
+  commentId: Overload:PdfBuilder.Builder`1.ReadProperty
+  isSpec: "True"
+  fullName: PdfBuilder.Builder<T>.ReadProperty
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty
+  nameWithType: Builder<T>.ReadProperty
+  nameWithType.vb: Builder(Of T).ReadProperty
+- uid: PdfBuilder.Builder`1.Set(System.Action{`0})
+  name: Set(Action<T>)
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Set_System_Action__0__
+  commentId: M:PdfBuilder.Builder`1.Set(System.Action{`0})
+  name.vb: Set(Action(Of T))
+  fullName: PdfBuilder.Builder<T>.Set(System.Action<T>)
+  fullName.vb: PdfBuilder.Builder(Of T).Set(System.Action(Of T))
+  nameWithType: Builder<T>.Set(Action<T>)
+  nameWithType.vb: Builder(Of T).Set(Action(Of T))
+- uid: PdfBuilder.Builder`1.Set*
+  name: Set
+  href: api/PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Set_
+  commentId: Overload:PdfBuilder.Builder`1.Set
+  isSpec: "True"
+  fullName: PdfBuilder.Builder<T>.Set
+  fullName.vb: PdfBuilder.Builder(Of T).Set
+  nameWithType: Builder<T>.Set
+  nameWithType.vb: Builder(Of T).Set
+- uid: PdfBuilder.ImageBuilder
+  name: ImageBuilder
+  href: api/PdfBuilder.ImageBuilder.html
+  commentId: T:PdfBuilder.ImageBuilder
+  fullName: PdfBuilder.ImageBuilder
+  nameWithType: ImageBuilder
+- uid: PdfBuilder.ImageBuilder.#ctor(System.String)
+  name: ImageBuilder(String)
+  href: api/PdfBuilder.ImageBuilder.html#PdfBuilder_ImageBuilder__ctor_System_String_
+  commentId: M:PdfBuilder.ImageBuilder.#ctor(System.String)
+  fullName: PdfBuilder.ImageBuilder.ImageBuilder(System.String)
+  nameWithType: ImageBuilder.ImageBuilder(String)
+- uid: PdfBuilder.ImageBuilder.#ctor*
+  name: ImageBuilder
+  href: api/PdfBuilder.ImageBuilder.html#PdfBuilder_ImageBuilder__ctor_
+  commentId: Overload:PdfBuilder.ImageBuilder.#ctor
+  isSpec: "True"
+  fullName: PdfBuilder.ImageBuilder.ImageBuilder
+  nameWithType: ImageBuilder.ImageBuilder
+- uid: PdfBuilder.Interfaces
+  name: PdfBuilder.Interfaces
+  href: api/PdfBuilder.Interfaces.html
+  commentId: N:PdfBuilder.Interfaces
+  fullName: PdfBuilder.Interfaces
+  nameWithType: PdfBuilder.Interfaces
+- uid: PdfBuilder.Interfaces.IPdfRenderer
+  name: IPdfRenderer
+  href: api/PdfBuilder.Interfaces.IPdfRenderer.html
+  commentId: T:PdfBuilder.Interfaces.IPdfRenderer
+  fullName: PdfBuilder.Interfaces.IPdfRenderer
+  nameWithType: IPdfRenderer
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  name: RenderPdf(PdfBuilder)
+  href: api/PdfBuilder.Interfaces.IPdfRenderer.html#PdfBuilder_Interfaces_IPdfRenderer_RenderPdf_PdfBuilder_PdfBuilder_
+  commentId: M:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  nameWithType: IPdfRenderer.RenderPdf(PdfBuilder)
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
+  name: RenderPdf
+  href: api/PdfBuilder.Interfaces.IPdfRenderer.html#PdfBuilder_Interfaces_IPdfRenderer_RenderPdf_
+  commentId: Overload:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
+  isSpec: "True"
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
+  nameWithType: IPdfRenderer.RenderPdf
+- uid: PdfBuilder.PdfBuilder
+  name: PdfBuilder
+  href: api/PdfBuilder.PdfBuilder.html
+  commentId: T:PdfBuilder.PdfBuilder
+  fullName: PdfBuilder.PdfBuilder
+  nameWithType: PdfBuilder
+- uid: PdfBuilder.PdfBuilder.#ctor(iTextSharp.text.Rectangle)
+  name: PdfBuilder(Rectangle)
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder__ctor_iTextSharp_text_Rectangle_
+  commentId: M:PdfBuilder.PdfBuilder.#ctor(iTextSharp.text.Rectangle)
+  fullName: PdfBuilder.PdfBuilder.PdfBuilder(iTextSharp.text.Rectangle)
+  nameWithType: PdfBuilder.PdfBuilder(Rectangle)
+- uid: PdfBuilder.PdfBuilder.#ctor*
+  name: PdfBuilder
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder__ctor_
+  commentId: Overload:PdfBuilder.PdfBuilder.#ctor
+  isSpec: "True"
+  fullName: PdfBuilder.PdfBuilder.PdfBuilder
+  nameWithType: PdfBuilder.PdfBuilder
+- uid: PdfBuilder.PdfBuilder.Dispose
+  name: Dispose()
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder_Dispose
+  commentId: M:PdfBuilder.PdfBuilder.Dispose
+  fullName: PdfBuilder.PdfBuilder.Dispose()
+  nameWithType: PdfBuilder.Dispose()
+- uid: PdfBuilder.PdfBuilder.Dispose(System.Boolean)
+  name: Dispose(Boolean)
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder_Dispose_System_Boolean_
+  commentId: M:PdfBuilder.PdfBuilder.Dispose(System.Boolean)
+  fullName: PdfBuilder.PdfBuilder.Dispose(System.Boolean)
+  nameWithType: PdfBuilder.Dispose(Boolean)
+- uid: PdfBuilder.PdfBuilder.Dispose*
+  name: Dispose
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder_Dispose_
+  commentId: Overload:PdfBuilder.PdfBuilder.Dispose
+  isSpec: "True"
+  fullName: PdfBuilder.PdfBuilder.Dispose
+  nameWithType: PdfBuilder.Dispose
+- uid: PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
+  name: GeneratePdf(IPdfRenderer, Stream)
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder_GeneratePdf_PdfBuilder_Interfaces_IPdfRenderer_System_IO_Stream_
+  commentId: M:PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
+  fullName: PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer, System.IO.Stream)
+  nameWithType: PdfBuilder.GeneratePdf(IPdfRenderer, Stream)
+- uid: PdfBuilder.PdfBuilder.GeneratePdf*
+  name: GeneratePdf
+  href: api/PdfBuilder.PdfBuilder.html#PdfBuilder_PdfBuilder_GeneratePdf_
+  commentId: Overload:PdfBuilder.PdfBuilder.GeneratePdf
+  isSpec: "True"
+  fullName: PdfBuilder.PdfBuilder.GeneratePdf
+  nameWithType: PdfBuilder.GeneratePdf
