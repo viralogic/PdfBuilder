@@ -1,0 +1,887 @@
+### YamlMime:ManagedReference
+items:
+- uid: PdfBuilder.Builder`1
+  commentId: T:PdfBuilder.Builder`1
+  id: Builder`1
+  parent: PdfBuilder
+  children:
+  - PdfBuilder.Builder`1.#ctor
+  - PdfBuilder.Builder`1.#ctor(`0)
+  - PdfBuilder.Builder`1.#ctor(System.Object[])
+  - PdfBuilder.Builder`1.Instance
+  - PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  - PdfBuilder.Builder`1.Set(System.Action{`0})
+  langs:
+  - csharp
+  - vb
+  name: Builder<T>
+  nameWithType: Builder<T>
+  fullName: PdfBuilder.Builder<T>
+  type: Class
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Builder
+    path: Builder.cs
+    startLine: 13
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nWrapper around and underlying instance of T where T is the type of iTextSharp instance\n"
+  example: []
+  syntax:
+    content: public class Builder<T>
+    typeParameters:
+    - id: T
+    content.vb: Public Class Builder(Of T)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - PdfBuilder.ImageBuilder
+  - PdfBuilder.PdfBuilder
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: Builder(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: PdfBuilder.Builder(Of T)
+  name.vb: Builder(Of T)
+- uid: PdfBuilder.Builder`1.Instance
+  commentId: P:PdfBuilder.Builder`1.Instance
+  id: Instance
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Builder<T>.Instance
+  fullName: PdfBuilder.Builder<T>.Instance
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Instance
+    path: Builder.cs
+    startLine: 15
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  syntax:
+    content: public T Instance { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Instance As T
+  overload: PdfBuilder.Builder`1.Instance*
+  nameWithType.vb: Builder(Of T).Instance
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).Instance
+- uid: PdfBuilder.Builder`1.#ctor
+  commentId: M:PdfBuilder.Builder`1.#ctor
+  id: '#ctor'
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: Builder()
+  nameWithType: Builder<T>.Builder()
+  fullName: PdfBuilder.Builder<T>.Builder()
+  type: Constructor
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: .ctor
+    path: Builder.cs
+    startLine: 21
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nDefault constructor. The underlying iTextSharp instance is attempted to be created using\nits default constructor.\n"
+  example: []
+  syntax:
+    content: public Builder()
+    content.vb: Public Sub New
+  overload: PdfBuilder.Builder`1.#ctor*
+  nameWithType.vb: Builder(Of T).Builder()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).Builder()
+- uid: PdfBuilder.Builder`1.#ctor(System.Object[])
+  commentId: M:PdfBuilder.Builder`1.#ctor(System.Object[])
+  id: '#ctor(System.Object[])'
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: Builder(Object[])
+  nameWithType: Builder<T>.Builder(Object[])
+  fullName: PdfBuilder.Builder<T>.Builder(System.Object[])
+  type: Constructor
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: .ctor
+    path: Builder.cs
+    startLine: 33
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nConstructor with parameters for instantiating instance of <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code>\n"
+  example: []
+  syntax:
+    content: public Builder(params object[] p)
+    parameters:
+    - id: p
+      type: System.Object[]
+      description: <xref href="System.Array" data-throw-if-not-resolved="false"></xref>An array of objects used as constructor parameters
+    content.vb: Public Sub New(ParamArray p As Object())
+  overload: PdfBuilder.Builder`1.#ctor*
+  nameWithType.vb: Builder(Of T).Builder(Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).Builder(System.Object())
+  name.vb: Builder(Object())
+- uid: PdfBuilder.Builder`1.#ctor(`0)
+  commentId: M:PdfBuilder.Builder`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: Builder(T)
+  nameWithType: Builder<T>.Builder(T)
+  fullName: PdfBuilder.Builder<T>.Builder(T)
+  type: Constructor
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: .ctor
+    path: Builder.cs
+    startLine: 54
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nConstructor from an instance of <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">T</code>\n"
+  example: []
+  syntax:
+    content: public Builder(T instance)
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> instance
+    content.vb: Public Sub New(instance As T)
+  overload: PdfBuilder.Builder`1.#ctor*
+  nameWithType.vb: Builder(Of T).Builder(T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).Builder(T)
+- uid: PdfBuilder.Builder`1.Set(System.Action{`0})
+  commentId: M:PdfBuilder.Builder`1.Set(System.Action{`0})
+  id: Set(System.Action{`0})
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: Set(Action<T>)
+  nameWithType: Builder<T>.Set(Action<T>)
+  fullName: PdfBuilder.Builder<T>.Set(System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Set
+    path: Builder.cs
+    startLine: 77
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nExecute an action on T\n"
+  example:
+  - "\n<pre><code>To set properties or perform actions:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nbuilder.Set(p =>\n    {\n        p.FontSize = 12; // The font size for the paragraph has been set to 12\n    });</code></pre>\n"
+  syntax:
+    content: public Builder<T> Set(Action<T> cb)
+    parameters:
+    - id: cb
+      type: System.Action{{T}}
+      description: Callback to execute to set properties of the underlying instance <xref href="System.Action%601" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: PdfBuilder.Builder`1
+      description: <xref href="PdfBuilder.Builder%601" data-throw-if-not-resolved="false"></xref> instance
+    content.vb: Public Function Set(cb As Action(Of T)) As Builder(Of T)
+  overload: PdfBuilder.Builder`1.Set*
+  nameWithType.vb: Builder(Of T).Set(Action(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).Set(System.Action(Of T))
+  name.vb: Set(Action(Of T))
+- uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  commentId: M:PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  id: ReadProperty(System.Func{`0,System.Object})
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: ReadProperty(Func<T, Object>)
+  nameWithType: Builder<T>.ReadProperty(Func<T, Object>)
+  fullName: PdfBuilder.Builder<T>.ReadProperty(System.Func<T, System.Object>)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: ReadProperty
+    path: Builder.cs
+    startLine: 98
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nRead properties of T\n"
+  example:
+  - "\n<pre><code>To return a value from T:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn (string)builder.Read(p => p.Content); // Returns &quot;Some text&quot;</code></pre>\n"
+  syntax:
+    content: public object ReadProperty(Func<T, object> cb)
+    parameters:
+    - id: cb
+      type: System.Func{{T},System.Object}
+      description: Callback to execute on T <xref href="System.Func%602" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.Object
+      description: <xref href="System.Object" data-throw-if-not-resolved="false"></xref>An instance of an object. Please note that this object will need to explicitly cast into appropriate type
+    content.vb: Public Function ReadProperty(cb As Func(Of T, Object)) As Object
+  overload: PdfBuilder.Builder`1.ReadProperty*
+  nameWithType.vb: Builder(Of T).ReadProperty(Func(Of T, Object))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(System.Func(Of T, System.Object))
+  name.vb: ReadProperty(Func(Of T, Object))
+references:
+- uid: PdfBuilder
+  commentId: N:PdfBuilder
+  isExternal: false
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PdfBuilder.Builder`1.Instance*
+  commentId: Overload:PdfBuilder.Builder`1.Instance
+  isExternal: false
+  name: Instance
+  nameWithType: Builder<T>.Instance
+  fullName: PdfBuilder.Builder<T>.Instance
+  nameWithType.vb: Builder(Of T).Instance
+  fullName.vb: PdfBuilder.Builder(Of T).Instance
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: PdfBuilder.Builder`1.#ctor*
+  commentId: Overload:PdfBuilder.Builder`1.#ctor
+  isExternal: false
+  name: Builder
+  nameWithType: Builder<T>.Builder
+  fullName: PdfBuilder.Builder<T>.Builder
+  nameWithType.vb: Builder(Of T).Builder
+  fullName.vb: PdfBuilder.Builder(Of T).Builder
+- uid: System.Array
+  commentId: T:System.Array
+- uid: System.Object[]
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder`1
+  commentId: T:PdfBuilder.Builder`1
+  parent: PdfBuilder
+  isExternal: false
+  name: Builder<T>
+  nameWithType: Builder<T>
+  fullName: PdfBuilder.Builder<T>
+  nameWithType.vb: Builder(Of T)
+  fullName.vb: PdfBuilder.Builder(Of T)
+  name.vb: Builder(Of T)
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder`1.Set*
+  commentId: Overload:PdfBuilder.Builder`1.Set
+  isExternal: false
+  name: Set
+  nameWithType: Builder<T>.Set
+  fullName: PdfBuilder.Builder<T>.Set
+  nameWithType.vb: Builder(Of T).Set
+  fullName.vb: PdfBuilder.Builder(Of T).Set
+- uid: System.Action{{T}}
+  commentId: T:System.Action{`0}
+  parent: System
+  definition: System.Action`1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder`1.ReadProperty*
+  commentId: Overload:PdfBuilder.Builder`1.ReadProperty
+  isExternal: false
+  name: ReadProperty
+  nameWithType: Builder<T>.ReadProperty
+  fullName: PdfBuilder.Builder<T>.ReadProperty
+  nameWithType.vb: Builder(Of T).ReadProperty
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty
+- uid: System.Func{{T},System.Object}
+  commentId: T:System.Func{`0,System.Object}
+  parent: System
+  definition: System.Func`2
+  name: Func<T, Object>
+  nameWithType: Func<T, Object>
+  fullName: System.Func<T, System.Object>
+  nameWithType.vb: Func(Of T, Object)
+  fullName.vb: System.Func(Of T, System.Object)
+  name.vb: Func(Of T, Object)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

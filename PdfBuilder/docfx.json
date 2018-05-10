@@ -14,7 +14,7 @@
           ]
         }
       ],
-      "dest": "obj/api"
+      "dest": "docs/api"
     }
   ],
   "build": {
@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "docs",
     "template": [
       "default"
     ]

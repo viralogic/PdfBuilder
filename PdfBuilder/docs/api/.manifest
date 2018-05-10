@@ -1,0 +1,20 @@
+{
+  "PdfBuilder": "PdfBuilder.yml",
+  "PdfBuilder.Builder`1": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.#ctor": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.#ctor(`0)": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.#ctor(System.Object[])": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.Instance": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.Builder`1.Set(System.Action{`0})": "PdfBuilder.Builder-1.yml",
+  "PdfBuilder.ImageBuilder": "PdfBuilder.ImageBuilder.yml",
+  "PdfBuilder.ImageBuilder.#ctor(System.String)": "PdfBuilder.ImageBuilder.yml",
+  "PdfBuilder.Interfaces": "PdfBuilder.Interfaces.yml",
+  "PdfBuilder.Interfaces.IPdfRenderer": "PdfBuilder.Interfaces.IPdfRenderer.yml",
+  "PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)": "PdfBuilder.Interfaces.IPdfRenderer.yml",
+  "PdfBuilder.PdfBuilder": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.#ctor(iTextSharp.text.Rectangle)": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.Dispose": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.Dispose(System.Boolean)": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)": "PdfBuilder.PdfBuilder.yml"
+}

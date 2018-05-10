@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: PdfBuilder.Interfaces.IPdfRenderer
+  commentId: T:PdfBuilder.Interfaces.IPdfRenderer
+  id: IPdfRenderer
+  parent: PdfBuilder.Interfaces
+  children:
+  - PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  langs:
+  - csharp
+  - vb
+  name: IPdfRenderer
+  nameWithType: IPdfRenderer
+  fullName: PdfBuilder.Interfaces.IPdfRenderer
+  type: Interface
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IPdfRenderer.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: IPdfRenderer
+    path: Interfaces/IPdfRenderer.cs
+    startLine: 8
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: public interface IPdfRenderer
+    content.vb: Public Interface IPdfRenderer
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  commentId: M:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  id: RenderPdf(PdfBuilder.PdfBuilder)
+  parent: PdfBuilder.Interfaces.IPdfRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderPdf(PdfBuilder)
+  nameWithType: IPdfRenderer.RenderPdf(PdfBuilder)
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IPdfRenderer.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: RenderPdf
+    path: Interfaces/IPdfRenderer.cs
+    startLine: 10
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: void RenderPdf(PdfBuilder page)
+    parameters:
+    - id: page
+      type: PdfBuilder.PdfBuilder
+    content.vb: Sub RenderPdf(page As PdfBuilder)
+  overload: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
+references:
+- uid: PdfBuilder.Interfaces
+  commentId: N:PdfBuilder.Interfaces
+  isExternal: false
+  name: PdfBuilder.Interfaces
+  nameWithType: PdfBuilder.Interfaces
+  fullName: PdfBuilder.Interfaces
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
+  commentId: Overload:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
+  isExternal: false
+  name: RenderPdf
+  nameWithType: IPdfRenderer.RenderPdf
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
+- uid: PdfBuilder.PdfBuilder
+  commentId: T:PdfBuilder.PdfBuilder
+  parent: PdfBuilder
+  isExternal: false
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder.PdfBuilder
+- uid: PdfBuilder
+  commentId: N:PdfBuilder
+  isExternal: false
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder

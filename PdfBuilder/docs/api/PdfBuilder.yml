@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: PdfBuilder
+  commentId: N:PdfBuilder
+  id: PdfBuilder
+  children:
+  - PdfBuilder.Builder`1
+  - PdfBuilder.ImageBuilder
+  - PdfBuilder.PdfBuilder
+  langs:
+  - csharp
+  - vb
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder
+  type: Namespace
+  assemblies:
+  - PdfBuilder
+references:
+- uid: PdfBuilder.Builder`1
+  commentId: T:PdfBuilder.Builder`1
+  parent: PdfBuilder
+  isExternal: false
+  name: Builder<T>
+  nameWithType: Builder<T>
+  fullName: PdfBuilder.Builder<T>
+  nameWithType.vb: Builder(Of T)
+  fullName.vb: PdfBuilder.Builder(Of T)
+  name.vb: Builder(Of T)
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.ImageBuilder
+  commentId: T:PdfBuilder.ImageBuilder
+  isExternal: false
+  name: ImageBuilder
+  nameWithType: ImageBuilder
+  fullName: PdfBuilder.ImageBuilder
+- uid: PdfBuilder.PdfBuilder
+  commentId: T:PdfBuilder.PdfBuilder
+  parent: PdfBuilder
+  isExternal: false
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder.PdfBuilder
+- uid: PdfBuilder
+  commentId: N:PdfBuilder
+  isExternal: false
+  name: PdfBuilder
+  nameWithType: PdfBuilder
+  fullName: PdfBuilder
