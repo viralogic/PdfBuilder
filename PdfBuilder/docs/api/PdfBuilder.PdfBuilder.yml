@@ -6,6 +6,8 @@ items:
   parent: PdfBuilder
   children:
   - PdfBuilder.PdfBuilder.#ctor(iTextSharp.text.Rectangle)
+  - PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder{iTextSharp.text.IElement})
+  - PdfBuilder.PdfBuilder.AddHtml(System.String)
   - PdfBuilder.PdfBuilder.Dispose
   - PdfBuilder.PdfBuilder.Dispose(System.Boolean)
   - PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
@@ -91,6 +93,81 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder{iTextSharp.text.IElement})
+  commentId: M:PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder{iTextSharp.text.IElement})
+  id: Add(PdfBuilder.Builder{iTextSharp.text.IElement})
+  parent: PdfBuilder.PdfBuilder
+  langs:
+  - csharp
+  - vb
+  name: Add(Builder<IElement>)
+  nameWithType: PdfBuilder.Add(Builder<IElement>)
+  fullName: PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder<iTextSharp.text.IElement>)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/PdfBuilder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Add
+    path: PdfBuilder.cs
+    startLine: 30
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nAdds an builder element to the document\n"
+  example: []
+  syntax:
+    content: public void Add(Builder<IElement> builder)
+    parameters:
+    - id: builder
+      type: PdfBuilder.Builder{iTextSharp.text.IElement}
+      description: <xref href="PdfBuilder.Builder%601" data-throw-if-not-resolved="false"></xref>An instance of a Builder object
+    content.vb: Public Sub Add(builder As Builder(Of IElement))
+  overload: PdfBuilder.PdfBuilder.Add*
+  nameWithType.vb: PdfBuilder.Add(Builder(Of IElement))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder(Of iTextSharp.text.IElement))
+  name.vb: Add(Builder(Of IElement))
+- uid: PdfBuilder.PdfBuilder.AddHtml(System.String)
+  commentId: M:PdfBuilder.PdfBuilder.AddHtml(System.String)
+  id: AddHtml(System.String)
+  parent: PdfBuilder.PdfBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddHtml(String)
+  nameWithType: PdfBuilder.AddHtml(String)
+  fullName: PdfBuilder.PdfBuilder.AddHtml(System.String)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/PdfBuilder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: AddHtml
+    path: PdfBuilder.cs
+    startLine: 39
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nAdd HTML to a document\n"
+  example: []
+  syntax:
+    content: public void AddHtml(string html)
+    parameters:
+    - id: html
+      type: System.String
+      description: <xref href="System.String" data-throw-if-not-resolved="false"></xref> HTML text
+    content.vb: Public Sub AddHtml(html As String)
+  overload: PdfBuilder.PdfBuilder.AddHtml*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
   commentId: M:PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
   id: GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
@@ -109,7 +186,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: GeneratePdf
     path: PdfBuilder.cs
-    startLine: 31
+    startLine: 58
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -148,7 +225,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: PdfBuilder.cs
-    startLine: 40
+    startLine: 72
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -186,7 +263,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: PdfBuilder.cs
-    startLine: 56
+    startLine: 88
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -902,6 +979,67 @@ references:
   name: iTextSharp.text
   nameWithType: iTextSharp.text
   fullName: iTextSharp.text
+- uid: PdfBuilder.PdfBuilder.Add*
+  commentId: Overload:PdfBuilder.PdfBuilder.Add
+  isExternal: false
+  name: Add
+  nameWithType: PdfBuilder.Add
+  fullName: PdfBuilder.PdfBuilder.Add
+- uid: PdfBuilder.Builder{iTextSharp.text.IElement}
+  commentId: T:PdfBuilder.Builder{iTextSharp.text.IElement}
+  parent: PdfBuilder
+  definition: PdfBuilder.Builder`1
+  name: Builder<IElement>
+  nameWithType: Builder<IElement>
+  fullName: PdfBuilder.Builder<iTextSharp.text.IElement>
+  nameWithType.vb: Builder(Of IElement)
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.IElement)
+  name.vb: Builder(Of IElement)
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: iTextSharp.text.IElement
+    name: IElement
+    nameWithType: IElement
+    fullName: iTextSharp.text.IElement
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: iTextSharp.text.IElement
+    name: IElement
+    nameWithType: IElement
+    fullName: iTextSharp.text.IElement
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: PdfBuilder.PdfBuilder.AddHtml*
+  commentId: Overload:PdfBuilder.PdfBuilder.AddHtml
+  isExternal: false
+  name: AddHtml
+  nameWithType: PdfBuilder.AddHtml
+  fullName: PdfBuilder.PdfBuilder.AddHtml
 - uid: System.IO.Stream
   commentId: T:System.IO.Stream
   parent: System.IO

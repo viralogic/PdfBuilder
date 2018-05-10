@@ -29,7 +29,7 @@ items:
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
-  summary: "\nWrapper around and underlying instance of T where T is the type of iTextSharp instance\n"
+  summary: "\nWrapper around and underlying instance of T where T is an IElement\n"
   example: []
   syntax:
     content: public class Builder<T>

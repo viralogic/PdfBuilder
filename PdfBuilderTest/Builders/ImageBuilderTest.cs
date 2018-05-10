@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PdfBuilder;
 using iTextSharp.text;
 
-namespace PdfBuilderTest
+namespace PdfBuilderTest.Builders
 {
     [TestClass]
     public class ImageBuilderTest

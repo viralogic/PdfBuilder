@@ -20,10 +20,12 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: IPdfRenderer
     path: Interfaces/IPdfRenderer.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder.Interfaces
+  summary: "\nInterface for rendering a PDF document\n"
+  example: []
   syntax:
     content: public interface IPdfRenderer
     content.vb: Public Interface IPdfRenderer
@@ -51,15 +53,18 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: RenderPdf
     path: Interfaces/IPdfRenderer.cs
-    startLine: 10
+    startLine: 17
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder.Interfaces
+  summary: "\nRenders a PDF document to the given PdfBuilder instance\n"
+  example: []
   syntax:
     content: void RenderPdf(PdfBuilder page)
     parameters:
     - id: page
       type: PdfBuilder.PdfBuilder
+      description: <xref href="PdfBuilder.PdfBuilder" data-throw-if-not-resolved="false"></xref>A PdfBuilder instance to render PDF to
     content.vb: Sub RenderPdf(page As PdfBuilder)
   overload: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
 references:
@@ -69,12 +74,6 @@ references:
   name: PdfBuilder.Interfaces
   nameWithType: PdfBuilder.Interfaces
   fullName: PdfBuilder.Interfaces
-- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
-  commentId: Overload:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
-  isExternal: false
-  name: RenderPdf
-  nameWithType: IPdfRenderer.RenderPdf
-  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
 - uid: PdfBuilder.PdfBuilder
   commentId: T:PdfBuilder.PdfBuilder
   parent: PdfBuilder
@@ -82,6 +81,12 @@ references:
   name: PdfBuilder
   nameWithType: PdfBuilder
   fullName: PdfBuilder.PdfBuilder
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
+  commentId: Overload:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
+  isExternal: false
+  name: RenderPdf
+  nameWithType: IPdfRenderer.RenderPdf
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
 - uid: PdfBuilder
   commentId: N:PdfBuilder
   isExternal: false

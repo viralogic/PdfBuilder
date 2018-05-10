@@ -25,13 +25,44 @@ namespace PdfBuilder
         }
 
         /// <summary>
+        /// Adds an builder element to the document
+        /// </summary>
+        /// <param name="builder"><see cref="Builder{T}"/>An instance of a Builder object</param>
+        public void Add(Builder<IElement> builder)
+        {
+            this.Instance.Add(builder.Instance);
+        }
+
+        /// <summary>
+        /// Add HTML to a document
+        /// </summary>
+        /// <param name="html"><see cref="System.String"/> HTML text</param>
+        public void AddHtml(string html)
+        {
+            using (var sr = new StringReader(html))
+            {
+                var providers = new Dictionary<string, object>();
+                var elements = HTMLWorker.ParseToList(sr, null, providers);
+                foreach (var e in elements)
+                {
+                    this.Instance.Add((IElement)e);
+                }
+            }
+        }
+
+        /// <summary>
         /// Renders content on the page using a renderer instance
         /// </summary>
         /// <param name="renderer">Instance of object that implements of IPdfRenderer interface</param>
         /// <param name="stream">Stream instance used to write pdf text to <see cref="System.IO.Stream"/></param>
         public void GeneratePdf(IPdfRenderer renderer, Stream stream)
         {
-            renderer.RenderPdf(this);
+            using (var writer = PdfWriter.GetInstance(this.Instance, stream))
+            {
+                this.Instance.Open();
+                renderer.RenderPdf(this);
+                this.Instance.Close();
+            }
         }
 
         /// <summary>

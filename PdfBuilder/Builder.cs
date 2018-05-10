@@ -9,7 +9,7 @@ using iTextSharp.text;
 namespace PdfBuilder
 {
     /// <summary>
-    /// Wrapper around and underlying instance of T where T is the type of iTextSharp instance
+    /// Wrapper around and underlying instance of T where T is an IElement
     /// </summary>
     public class Builder<T>
     {

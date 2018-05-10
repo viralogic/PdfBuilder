@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builders\ParagraphBuilderTest.cs" />
-    <Compile Include="ImageBuilderTest.cs" />
+    <Compile Include="Builders\ImageBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

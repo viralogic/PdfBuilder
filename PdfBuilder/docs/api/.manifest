@@ -14,6 +14,8 @@
   "PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)": "PdfBuilder.Interfaces.IPdfRenderer.yml",
   "PdfBuilder.PdfBuilder": "PdfBuilder.PdfBuilder.yml",
   "PdfBuilder.PdfBuilder.#ctor(iTextSharp.text.Rectangle)": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.Add(PdfBuilder.Builder{iTextSharp.text.IElement})": "PdfBuilder.PdfBuilder.yml",
+  "PdfBuilder.PdfBuilder.AddHtml(System.String)": "PdfBuilder.PdfBuilder.yml",
   "PdfBuilder.PdfBuilder.Dispose": "PdfBuilder.PdfBuilder.yml",
   "PdfBuilder.PdfBuilder.Dispose(System.Boolean)": "PdfBuilder.PdfBuilder.yml",
   "PdfBuilder.PdfBuilder.GeneratePdf(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)": "PdfBuilder.PdfBuilder.yml"
