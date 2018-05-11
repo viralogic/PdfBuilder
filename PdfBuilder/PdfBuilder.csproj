@@ -53,44 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="docfx.json" />
-    <None Include="docs\api\.manifest" />
-    <None Include="docs\api\PdfBuilder.Builder-1.yml" />
-    <None Include="docs\api\PdfBuilder.ImageBuilder.yml" />
-    <None Include="docs\api\PdfBuilder.Interfaces.IPdfRenderer.yml" />
-    <None Include="docs\api\PdfBuilder.Interfaces.yml" />
-    <None Include="docs\api\PdfBuilder.PdfBuilder.yml" />
-    <None Include="docs\api\PdfBuilder.yml" />
-    <None Include="docs\api\toc.yml" />
-    <None Include="docs\fonts\glyphicons-halflings-regular.eot" />
-    <None Include="docs\fonts\glyphicons-halflings-regular.ttf" />
-    <None Include="docs\fonts\glyphicons-halflings-regular.woff" />
-    <None Include="docs\fonts\glyphicons-halflings-regular.woff2" />
-    <None Include="docs\manifest.json" />
-    <None Include="docs\search-stopwords.json" />
-    <None Include="docs\xrefmap.yml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="docs\api\PdfBuilder.Builder-1.html" />
-    <Content Include="docs\api\PdfBuilder.html" />
-    <Content Include="docs\api\PdfBuilder.ImageBuilder.html" />
-    <Content Include="docs\api\PdfBuilder.Interfaces.html" />
-    <Content Include="docs\api\PdfBuilder.Interfaces.IPdfRenderer.html" />
-    <Content Include="docs\api\PdfBuilder.PdfBuilder.html" />
-    <Content Include="docs\api\toc.html" />
-    <Content Include="docs\favicon.ico" />
-    <Content Include="docs\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="docs\logo.svg" />
-    <Content Include="docs\styles\docfx.css" />
-    <Content Include="docs\styles\docfx.js" />
-    <Content Include="docs\styles\docfx.vendor.css" />
-    <Content Include="docs\styles\docfx.vendor.js" />
-    <Content Include="docs\styles\lunr.js" />
-    <Content Include="docs\styles\lunr.min.js" />
-    <Content Include="docs\styles\main.css" />
-    <Content Include="docs\styles\main.js" />
-    <Content Include="docs\styles\search-worker.js" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

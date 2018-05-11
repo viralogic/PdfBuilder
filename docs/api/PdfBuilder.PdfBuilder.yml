@@ -186,7 +186,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: GeneratePdf
     path: PdfBuilder.cs
-    startLine: 58
+    startLine: 57
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -225,7 +225,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: PdfBuilder.cs
-    startLine: 72
+    startLine: 71
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -263,7 +263,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: PdfBuilder.cs
-    startLine: 88
+    startLine: 87
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
