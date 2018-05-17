@@ -35,7 +35,7 @@ items:
   inheritedMembers:
   - PdfBuilder.Builder{iTextSharp.text.Image}.Instance
   - PdfBuilder.Builder{iTextSharp.text.Image}.Set(System.Action{iTextSharp.text.Image})
-  - PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty(System.Func{iTextSharp.text.Image,System.Object})
+  - PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,{TResult}})
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -211,21 +211,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty(System.Func{iTextSharp.text.Image,System.Object})
-  commentId: M:PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty(System.Func{iTextSharp.text.Image,System.Object})
+- uid: PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,{TResult}})
+  commentId: M:PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,``0})
   parent: PdfBuilder.Builder{iTextSharp.text.Image}
-  definition: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-  name: ReadProperty(Func<Image, Object>)
-  nameWithType: Builder<Image>.ReadProperty(Func<Image, Object>)
-  fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty(System.Func<iTextSharp.text.Image, System.Object>)
-  nameWithType.vb: Builder(Of Image).ReadProperty(Func(Of Image, Object))
-  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty(System.Func(Of iTextSharp.text.Image, System.Object))
-  name.vb: ReadProperty(Func(Of Image, Object))
+  definition: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+  name: ReadProperty<TResult>(Func<Image, TResult>)
+  nameWithType: Builder<Image>.ReadProperty<TResult>(Func<Image, TResult>)
+  fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty<TResult>(System.Func<iTextSharp.text.Image, TResult>)
+  nameWithType.vb: Builder(Of Image).ReadProperty(Of TResult)(Func(Of Image, TResult))
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty(Of TResult)(System.Func(Of iTextSharp.text.Image, TResult))
+  name.vb: ReadProperty(Of TResult)(Func(Of Image, TResult))
   spec.csharp:
-  - uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-    name: ReadProperty
-    nameWithType: Builder<Image>.ReadProperty
-    fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty
+  - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+    name: ReadProperty<TResult>
+    nameWithType: Builder<Image>.ReadProperty<TResult>
+    fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty<TResult>
   - name: (
     nameWithType: (
     fullName: (
@@ -245,11 +245,9 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -257,10 +255,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-    name: ReadProperty
-    nameWithType: Builder(Of Image).ReadProperty
-    fullName: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty
+  - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+    name: ReadProperty(Of TResult)
+    nameWithType: Builder(Of Image).ReadProperty(Of TResult)
+    fullName: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty(Of TResult)
   - name: (
     nameWithType: (
     fullName: (
@@ -280,11 +278,9 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
@@ -681,20 +677,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-  commentId: M:PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+- uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+  commentId: M:PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
   isExternal: true
-  name: ReadProperty(Func<T, Object>)
-  nameWithType: Builder<T>.ReadProperty(Func<T, Object>)
-  fullName: PdfBuilder.Builder<T>.ReadProperty(System.Func<T, System.Object>)
-  nameWithType.vb: Builder(Of T).ReadProperty(Func(Of T, Object))
-  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(System.Func(Of T, System.Object))
-  name.vb: ReadProperty(Func(Of T, Object))
+  name: ReadProperty<TResult>(Func<T, TResult>)
+  nameWithType: Builder<T>.ReadProperty<TResult>(Func<T, TResult>)
+  fullName: PdfBuilder.Builder<T>.ReadProperty<TResult>(System.Func<T, TResult>)
+  nameWithType.vb: Builder(Of T).ReadProperty(Of TResult)(Func(Of T, TResult))
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(Of TResult)(System.Func(Of T, TResult))
+  name.vb: ReadProperty(Of TResult)(Func(Of T, TResult))
   spec.csharp:
-  - uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-    name: ReadProperty
-    nameWithType: Builder<T>.ReadProperty
-    fullName: PdfBuilder.Builder<T>.ReadProperty
+  - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+    name: ReadProperty<TResult>
+    nameWithType: Builder<T>.ReadProperty<TResult>
+    fullName: PdfBuilder.Builder<T>.ReadProperty<TResult>
   - name: (
     nameWithType: (
     fullName: (
@@ -712,11 +708,9 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -724,10 +718,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-    name: ReadProperty
-    nameWithType: Builder(Of T).ReadProperty
-    fullName: PdfBuilder.Builder(Of T).ReadProperty
+  - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+    name: ReadProperty(Of TResult)
+    nameWithType: Builder(Of T).ReadProperty(Of TResult)
+    fullName: PdfBuilder.Builder(Of T).ReadProperty(Of TResult)
   - name: (
     nameWithType: (
     fullName: (
@@ -745,11 +739,9 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )

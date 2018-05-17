@@ -14,7 +14,7 @@ namespace PdfBuilder.Interfaces
         /// <summary>
         /// Renders a PDF document to the given PdfBuilder instance
         /// </summary>
-        /// <param name="page"><see cref="PdfBuilder"/>A PdfBuilder instance to render PDF to</param>
-        void RenderPdf(PdfBuilder page);
+        /// <param name="page"><see cref="Pdf"/>A PdfBuilder instance to render PDF to</param>
+        void RenderPdf(Pdf page);
     }
 }

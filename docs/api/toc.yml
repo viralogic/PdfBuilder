@@ -7,8 +7,8 @@
     name.vb: Builder(Of T)
   - uid: PdfBuilder.ImageBuilder
     name: ImageBuilder
-  - uid: PdfBuilder.PdfBuilder
-    name: PdfBuilder
+  - uid: PdfBuilder.Pdf
+    name: Pdf
 - uid: PdfBuilder.Interfaces
   name: PdfBuilder.Interfaces
   items:

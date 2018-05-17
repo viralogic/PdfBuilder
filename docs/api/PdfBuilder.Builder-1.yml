@@ -9,7 +9,7 @@ items:
   - PdfBuilder.Builder`1.#ctor(`0)
   - PdfBuilder.Builder`1.#ctor(System.Object[])
   - PdfBuilder.Builder`1.Instance
-  - PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
+  - PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
   - PdfBuilder.Builder`1.Set(System.Action{`0})
   langs:
   - csharp
@@ -40,7 +40,7 @@ items:
   - System.Object
   derivedClasses:
   - PdfBuilder.ImageBuilder
-  - PdfBuilder.PdfBuilder
+  - PdfBuilder.Pdf
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -249,16 +249,16 @@ items:
   - Public
   fullName.vb: PdfBuilder.Builder(Of T).Set(System.Action(Of T))
   name.vb: Set(Action(Of T))
-- uid: PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-  commentId: M:PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})
-  id: ReadProperty(System.Func{`0,System.Object})
+- uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+  commentId: M:PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
+  id: ReadProperty``1(System.Func{`0,``0})
   parent: PdfBuilder.Builder`1
   langs:
   - csharp
   - vb
-  name: ReadProperty(Func<T, Object>)
-  nameWithType: Builder<T>.ReadProperty(Func<T, Object>)
-  fullName: PdfBuilder.Builder<T>.ReadProperty(System.Func<T, System.Object>)
+  name: ReadProperty<TResult>(Func<T, TResult>)
+  nameWithType: Builder<T>.ReadProperty<TResult>(Func<T, TResult>)
+  fullName: PdfBuilder.Builder<T>.ReadProperty<TResult>(System.Func<T, TResult>)
   type: Method
   source:
     remote:
@@ -273,25 +273,28 @@ items:
   namespace: PdfBuilder
   summary: "\nRead properties of T\n"
   example:
-  - "\n<pre><code>To return a value from T:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn (string)builder.Read(p => p.Content); // Returns &quot;Some text&quot;</code></pre>\n"
+  - "\n<pre><code>To return a value from T:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn builder.Read(p => p.Content); // Returns &quot;Some text&quot;</code></pre>\n"
   syntax:
-    content: public object ReadProperty(Func<T, object> cb)
+    content: public TResult ReadProperty<TResult>(Func<T, TResult> cb)
     parameters:
     - id: cb
-      type: System.Func{{T},System.Object}
+      type: System.Func{{T},{TResult}}
       description: Callback to execute on T <xref href="System.Func%602" data-throw-if-not-resolved="false"></xref>
+    typeParameters:
+    - id: TResult
+      description: ''
     return:
-      type: System.Object
-      description: <xref href="System.Object" data-throw-if-not-resolved="false"></xref>An instance of an object. Please note that this object will need to explicitly cast into appropriate type
-    content.vb: Public Function ReadProperty(cb As Func(Of T, Object)) As Object
+      type: '{TResult}'
+      description: The return value of the callback
+    content.vb: Public Function ReadProperty(Of TResult)(cb As Func(Of T, TResult)) As TResult
   overload: PdfBuilder.Builder`1.ReadProperty*
-  nameWithType.vb: Builder(Of T).ReadProperty(Func(Of T, Object))
+  nameWithType.vb: Builder(Of T).ReadProperty(Of TResult)(Func(Of T, TResult))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(System.Func(Of T, System.Object))
-  name.vb: ReadProperty(Func(Of T, Object))
+  fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(Of TResult)(System.Func(Of T, TResult))
+  name.vb: ReadProperty(Of TResult)(Func(Of T, TResult))
 references:
 - uid: PdfBuilder
   commentId: N:PdfBuilder
@@ -829,16 +832,16 @@ references:
   fullName: PdfBuilder.Builder<T>.ReadProperty
   nameWithType.vb: Builder(Of T).ReadProperty
   fullName.vb: PdfBuilder.Builder(Of T).ReadProperty
-- uid: System.Func{{T},System.Object}
-  commentId: T:System.Func{`0,System.Object}
+- uid: System.Func{{T},{TResult}}
+  commentId: T:System.Func{`0,``0}
   parent: System
   definition: System.Func`2
-  name: Func<T, Object>
-  nameWithType: Func<T, Object>
-  fullName: System.Func<T, System.Object>
-  nameWithType.vb: Func(Of T, Object)
-  fullName.vb: System.Func(Of T, System.Object)
-  name.vb: Func(Of T, Object)
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
   spec.csharp:
   - uid: System.Func`2
     name: Func
@@ -854,11 +857,9 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -877,11 +878,21 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
   - name: )
     nameWithType: )
     fullName: )
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
+  commentId: '!:TResult'
+  isExternal: false
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult

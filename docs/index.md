@@ -19,12 +19,12 @@ In .NET, a common PDF creating library is iTextSharp. As you can [see](https://d
 
 For me, using a fluent style syntax would help take the verbosity and drudgery of creating PDFs by hand using iTextSharp. For example, to create the same PDF as above, I would want to write:
 
-	var pdf = new PdfBuilder()
+	var pdf = new Pdf(PageSize.A4)
 		.Add(new Builder<Paragraph>("First paragraph"))
 		.Add(new Builder<Paragraph>("Second paragraph")
 			.Set(p => { p.setSpacingBefore(380f); })
 		)
-		.Render(new FileOutputStream(filename);
+		.Save("myPdf.pdf");
 
 This is the sole purpose of PdfBuilder.
 

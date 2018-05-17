@@ -6,7 +6,7 @@ items:
   children:
   - PdfBuilder.Builder`1
   - PdfBuilder.ImageBuilder
-  - PdfBuilder.PdfBuilder
+  - PdfBuilder.Pdf
   langs:
   - csharp
   - vb
@@ -61,13 +61,13 @@ references:
   name: ImageBuilder
   nameWithType: ImageBuilder
   fullName: PdfBuilder.ImageBuilder
-- uid: PdfBuilder.PdfBuilder
-  commentId: T:PdfBuilder.PdfBuilder
+- uid: PdfBuilder.Pdf
+  commentId: T:PdfBuilder.Pdf
   parent: PdfBuilder
   isExternal: false
-  name: PdfBuilder
-  nameWithType: PdfBuilder
-  fullName: PdfBuilder.PdfBuilder
+  name: Pdf
+  nameWithType: Pdf
+  fullName: PdfBuilder.Pdf
 - uid: PdfBuilder
   commentId: N:PdfBuilder
   isExternal: false

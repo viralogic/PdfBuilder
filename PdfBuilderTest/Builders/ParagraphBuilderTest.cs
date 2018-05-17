@@ -14,12 +14,12 @@ namespace PdfBuilderTest.Builders
         public void TestRead()
         {
             var paragraph = new Builder<Paragraph>();
-            var result = (string)paragraph.ReadProperty(p => p.Content);
+            var result = paragraph.ReadProperty(p => p.Content);
             Assert.AreEqual<string>(result, string.Empty);
 
 
             paragraph = new Builder<Paragraph>("Hello world!");
-            result = (string)paragraph.ReadProperty(p => p.Content);
+            result = paragraph.ReadProperty(p => p.Content);
             Assert.AreEqual<string>("Hello world!", result);
 
         }

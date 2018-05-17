@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Builders\ParagraphBuilderTest.cs" />
     <Compile Include="Builders\ImageBuilderTest.cs" />
+    <Compile Include="Builders\PdfBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Images\20180330_110345-COLLAGE_Crop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Files\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

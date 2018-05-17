@@ -87,16 +87,16 @@ namespace PdfBuilder
         /// <param name="cb">Callback to execute on T <see cref="Func{T, TResult}"/></param>
         /// <typeparam name="T"></typeparam>
         /// <typeparam name="TResult"></typeparam>
-        /// <returns><see cref="System.Object"/>An instance of an object. Please note that this object will need to explicitly cast into appropriate type</returns>
+        /// <returns>The return value of the callback</returns>
         /// <example>
         /// <code>
         /// To return a value from T:
         /// 
         /// var builder = new Builder<![CDATA[<Paragraph>]]>("Some text");
-        /// return (string)builder.Read(p => p.Content); // Returns "Some text"
+        /// return builder.Read(p => p.Content); // Returns "Some text"
         /// </code>
         /// </example>
-        public object ReadProperty(Func<T, object> cb)
+        public TResult ReadProperty<TResult>(Func<T, TResult> cb)
         {
             return cb(this.Instance);
         }

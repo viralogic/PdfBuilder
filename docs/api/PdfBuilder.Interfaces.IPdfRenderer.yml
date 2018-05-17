@@ -5,7 +5,7 @@ items:
   id: IPdfRenderer
   parent: PdfBuilder.Interfaces
   children:
-  - PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  - PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.Pdf)
   langs:
   - csharp
   - vb
@@ -35,16 +35,16 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
-  commentId: M:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
-  id: RenderPdf(PdfBuilder.PdfBuilder)
+- uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.Pdf)
+  commentId: M:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.Pdf)
+  id: RenderPdf(PdfBuilder.Pdf)
   parent: PdfBuilder.Interfaces.IPdfRenderer
   langs:
   - csharp
   - vb
-  name: RenderPdf(PdfBuilder)
-  nameWithType: IPdfRenderer.RenderPdf(PdfBuilder)
-  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.PdfBuilder)
+  name: RenderPdf(Pdf)
+  nameWithType: IPdfRenderer.RenderPdf(Pdf)
+  fullName: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf(PdfBuilder.Pdf)
   type: Method
   source:
     remote:
@@ -60,12 +60,12 @@ items:
   summary: "\nRenders a PDF document to the given PdfBuilder instance\n"
   example: []
   syntax:
-    content: void RenderPdf(PdfBuilder page)
+    content: void RenderPdf(Pdf page)
     parameters:
     - id: page
-      type: PdfBuilder.PdfBuilder
-      description: <xref href="PdfBuilder.PdfBuilder" data-throw-if-not-resolved="false"></xref>A PdfBuilder instance to render PDF to
-    content.vb: Sub RenderPdf(page As PdfBuilder)
+      type: PdfBuilder.Pdf
+      description: <xref href="PdfBuilder.Pdf" data-throw-if-not-resolved="false"></xref>A PdfBuilder instance to render PDF to
+    content.vb: Sub RenderPdf(page As Pdf)
   overload: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
 references:
 - uid: PdfBuilder.Interfaces
@@ -74,13 +74,13 @@ references:
   name: PdfBuilder.Interfaces
   nameWithType: PdfBuilder.Interfaces
   fullName: PdfBuilder.Interfaces
-- uid: PdfBuilder.PdfBuilder
-  commentId: T:PdfBuilder.PdfBuilder
+- uid: PdfBuilder.Pdf
+  commentId: T:PdfBuilder.Pdf
   parent: PdfBuilder
   isExternal: false
-  name: PdfBuilder
-  nameWithType: PdfBuilder
-  fullName: PdfBuilder.PdfBuilder
+  name: Pdf
+  nameWithType: Pdf
+  fullName: PdfBuilder.Pdf
 - uid: PdfBuilder.Interfaces.IPdfRenderer.RenderPdf*
   commentId: Overload:PdfBuilder.Interfaces.IPdfRenderer.RenderPdf
   isExternal: false
