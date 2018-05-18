@@ -7,6 +7,8 @@ items:
   - PdfBuilder.Builder`1
   - PdfBuilder.ImageBuilder
   - PdfBuilder.Pdf
+  - PdfBuilder.TableBuilder
+  - PdfBuilder.TableRowBuilder
   langs:
   - csharp
   - vb
@@ -68,6 +70,18 @@ references:
   name: Pdf
   nameWithType: Pdf
   fullName: PdfBuilder.Pdf
+- uid: PdfBuilder.TableBuilder
+  commentId: T:PdfBuilder.TableBuilder
+  isExternal: false
+  name: TableBuilder
+  nameWithType: TableBuilder
+  fullName: PdfBuilder.TableBuilder
+- uid: PdfBuilder.TableRowBuilder
+  commentId: T:PdfBuilder.TableRowBuilder
+  isExternal: false
+  name: TableRowBuilder
+  nameWithType: TableRowBuilder
+  fullName: PdfBuilder.TableRowBuilder
 - uid: PdfBuilder
   commentId: N:PdfBuilder
   isExternal: false

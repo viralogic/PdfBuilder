@@ -9,6 +9,10 @@
     name: ImageBuilder
   - uid: PdfBuilder.Pdf
     name: Pdf
+  - uid: PdfBuilder.TableBuilder
+    name: TableBuilder
+  - uid: PdfBuilder.TableRowBuilder
+    name: TableRowBuilder
 - uid: PdfBuilder.Interfaces
   name: PdfBuilder.Interfaces
   items:

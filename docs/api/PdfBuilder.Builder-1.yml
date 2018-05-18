@@ -41,6 +41,8 @@ items:
   derivedClasses:
   - PdfBuilder.ImageBuilder
   - PdfBuilder.Pdf
+  - PdfBuilder.TableBuilder
+  - PdfBuilder.TableRowBuilder
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)

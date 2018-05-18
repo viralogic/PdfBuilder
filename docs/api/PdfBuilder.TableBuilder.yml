@@ -1,43 +1,41 @@
 ### YamlMime:ManagedReference
 items:
-- uid: PdfBuilder.ImageBuilder
-  commentId: T:PdfBuilder.ImageBuilder
-  id: ImageBuilder
+- uid: PdfBuilder.TableBuilder
+  commentId: T:PdfBuilder.TableBuilder
+  id: TableBuilder
   parent: PdfBuilder
   children:
-  - PdfBuilder.ImageBuilder.#ctor(System.String)
+  - PdfBuilder.TableBuilder.#ctor(System.Int32)
   langs:
   - csharp
   - vb
-  name: ImageBuilder
-  nameWithType: ImageBuilder
-  fullName: PdfBuilder.ImageBuilder
+  name: TableBuilder
+  nameWithType: TableBuilder
+  fullName: PdfBuilder.TableBuilder
   type: Class
   source:
     remote:
-      path: PdfBuilder/ImageBuilder.cs
+      path: PdfBuilder/TableBuilder.cs
       branch: master
       repo: https://github.com/viralogic/PdfBuilder.git
-    id: ImageBuilder
-    path: ImageBuilder.cs
-    startLine: 12
+    id: TableBuilder
+    path: TableBuilder.cs
+    startLine: 9
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
-  summary: "\nHandles PDF images\n"
-  example: []
   syntax:
-    content: 'public class ImageBuilder : Builder<Image>'
+    content: 'public class TableBuilder : Builder<PdfPTable>'
     content.vb: >-
-      Public Class ImageBuilder
-          Inherits Builder(Of Image)
+      Public Class TableBuilder
+          Inherits Builder(Of PdfPTable)
   inheritance:
   - System.Object
-  - PdfBuilder.Builder{iTextSharp.text.Image}
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
   inheritedMembers:
-  - PdfBuilder.Builder{iTextSharp.text.Image}.Instance
-  - PdfBuilder.Builder{iTextSharp.text.Image}.Set(System.Action{iTextSharp.text.Image})
-  - PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,{TResult}})
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadProperty``1(System.Func{iTextSharp.text.pdf.PdfPTable,{TResult}})
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -51,38 +49,38 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: PdfBuilder.ImageBuilder.#ctor(System.String)
-  commentId: M:PdfBuilder.ImageBuilder.#ctor(System.String)
-  id: '#ctor(System.String)'
-  parent: PdfBuilder.ImageBuilder
+- uid: PdfBuilder.TableBuilder.#ctor(System.Int32)
+  commentId: M:PdfBuilder.TableBuilder.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: PdfBuilder.TableBuilder
   langs:
   - csharp
   - vb
-  name: ImageBuilder(String)
-  nameWithType: ImageBuilder.ImageBuilder(String)
-  fullName: PdfBuilder.ImageBuilder.ImageBuilder(System.String)
+  name: TableBuilder(Int32)
+  nameWithType: TableBuilder.TableBuilder(Int32)
+  fullName: PdfBuilder.TableBuilder.TableBuilder(System.Int32)
   type: Constructor
   source:
     remote:
-      path: PdfBuilder/ImageBuilder.cs
+      path: PdfBuilder/TableBuilder.cs
       branch: master
       repo: https://github.com/viralogic/PdfBuilder.git
     id: .ctor
-    path: ImageBuilder.cs
-    startLine: 18
+    path: TableBuilder.cs
+    startLine: 15
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
-  summary: "\nConstructs an ImageBuilder instance from a file name\n"
+  summary: "\nConstructor to create a table with given number of columns\n"
   example: []
   syntax:
-    content: public ImageBuilder(string filePath)
+    content: public TableBuilder(int numColumns)
     parameters:
-    - id: filePath
-      type: System.String
-      description: The full path to the file<xref href="System.String" data-throw-if-not-resolved="false"></xref>
-    content.vb: Public Sub New(filePath As String)
-  overload: PdfBuilder.ImageBuilder.#ctor*
+    - id: numColumns
+      type: System.Int32
+      description: The number of columns in the table <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub New(numColumns As Integer)
+  overload: PdfBuilder.TableBuilder.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -101,16 +99,16 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: PdfBuilder.Builder{iTextSharp.text.Image}
-  commentId: T:PdfBuilder.Builder{iTextSharp.text.Image}
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  commentId: T:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
   parent: PdfBuilder
   definition: PdfBuilder.Builder`1
-  name: Builder<Image>
-  nameWithType: Builder<Image>
-  fullName: PdfBuilder.Builder<iTextSharp.text.Image>
-  nameWithType.vb: Builder(Of Image)
-  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image)
-  name.vb: Builder(Of Image)
+  name: Builder<PdfPTable>
+  nameWithType: Builder<PdfPTable>
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>
+  nameWithType.vb: Builder(Of PdfPTable)
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable)
+  name.vb: Builder(Of PdfPTable)
   spec.csharp:
   - uid: PdfBuilder.Builder`1
     name: Builder
@@ -119,10 +117,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -135,38 +133,38 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: PdfBuilder.Builder{iTextSharp.text.Image}.Instance
-  commentId: P:PdfBuilder.Builder{iTextSharp.text.Image}.Instance
-  parent: PdfBuilder.Builder{iTextSharp.text.Image}
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
+  commentId: P:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
   definition: PdfBuilder.Builder`1.Instance
   name: Instance
-  nameWithType: Builder<Image>.Instance
-  fullName: PdfBuilder.Builder<iTextSharp.text.Image>.Instance
-  nameWithType.vb: Builder(Of Image).Instance
-  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image).Instance
-- uid: PdfBuilder.Builder{iTextSharp.text.Image}.Set(System.Action{iTextSharp.text.Image})
-  commentId: M:PdfBuilder.Builder{iTextSharp.text.Image}.Set(System.Action{iTextSharp.text.Image})
-  parent: PdfBuilder.Builder{iTextSharp.text.Image}
+  nameWithType: Builder<PdfPTable>.Instance
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.Instance
+  nameWithType.vb: Builder(Of PdfPTable).Instance
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).Instance
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
+  commentId: M:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
   definition: PdfBuilder.Builder`1.Set(System.Action{`0})
-  name: Set(Action<Image>)
-  nameWithType: Builder<Image>.Set(Action<Image>)
-  fullName: PdfBuilder.Builder<iTextSharp.text.Image>.Set(System.Action<iTextSharp.text.Image>)
-  nameWithType.vb: Builder(Of Image).Set(Action(Of Image))
-  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image).Set(System.Action(Of iTextSharp.text.Image))
-  name.vb: Set(Action(Of Image))
+  name: Set(Action<PdfPTable>)
+  nameWithType: Builder<PdfPTable>.Set(Action<PdfPTable>)
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.Set(System.Action<iTextSharp.text.pdf.PdfPTable>)
+  nameWithType.vb: Builder(Of PdfPTable).Set(Action(Of PdfPTable))
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).Set(System.Action(Of iTextSharp.text.pdf.PdfPTable))
+  name.vb: Set(Action(Of PdfPTable))
   spec.csharp:
   - uid: PdfBuilder.Builder`1.Set(System.Action{`0})
     name: Set
-    nameWithType: Builder<Image>.Set
-    fullName: PdfBuilder.Builder<iTextSharp.text.Image>.Set
+    nameWithType: Builder<PdfPTable>.Set
+    fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.Set
   - name: (
     nameWithType: (
     fullName: (
@@ -178,10 +176,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -192,8 +190,8 @@ references:
   spec.vb:
   - uid: PdfBuilder.Builder`1.Set(System.Action{`0})
     name: Set
-    nameWithType: Builder(Of Image).Set
-    fullName: PdfBuilder.Builder(Of iTextSharp.text.Image).Set
+    nameWithType: Builder(Of PdfPTable).Set
+    fullName: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).Set
   - name: (
     nameWithType: (
     fullName: (
@@ -205,10 +203,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: )
     nameWithType: )
@@ -216,21 +214,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,{TResult}})
-  commentId: M:PdfBuilder.Builder{iTextSharp.text.Image}.ReadProperty``1(System.Func{iTextSharp.text.Image,``0})
-  parent: PdfBuilder.Builder{iTextSharp.text.Image}
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadProperty``1(System.Func{iTextSharp.text.pdf.PdfPTable,{TResult}})
+  commentId: M:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadProperty``1(System.Func{iTextSharp.text.pdf.PdfPTable,``0})
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
   definition: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
-  name: ReadProperty<TResult>(Func<Image, TResult>)
-  nameWithType: Builder<Image>.ReadProperty<TResult>(Func<Image, TResult>)
-  fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty<TResult>(System.Func<iTextSharp.text.Image, TResult>)
-  nameWithType.vb: Builder(Of Image).ReadProperty(Of TResult)(Func(Of Image, TResult))
-  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty(Of TResult)(System.Func(Of iTextSharp.text.Image, TResult))
-  name.vb: ReadProperty(Of TResult)(Func(Of Image, TResult))
+  name: ReadProperty<TResult>(Func<PdfPTable, TResult>)
+  nameWithType: Builder<PdfPTable>.ReadProperty<TResult>(Func<PdfPTable, TResult>)
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.ReadProperty<TResult>(System.Func<iTextSharp.text.pdf.PdfPTable, TResult>)
+  nameWithType.vb: Builder(Of PdfPTable).ReadProperty(Of TResult)(Func(Of PdfPTable, TResult))
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).ReadProperty(Of TResult)(System.Func(Of iTextSharp.text.pdf.PdfPTable, TResult))
+  name.vb: ReadProperty(Of TResult)(Func(Of PdfPTable, TResult))
   spec.csharp:
   - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
     name: ReadProperty<TResult>
-    nameWithType: Builder<Image>.ReadProperty<TResult>
-    fullName: PdfBuilder.Builder<iTextSharp.text.Image>.ReadProperty<TResult>
+    nameWithType: Builder<PdfPTable>.ReadProperty<TResult>
+    fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.ReadProperty<TResult>
   - name: (
     nameWithType: (
     fullName: (
@@ -242,10 +240,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -262,8 +260,8 @@ references:
   spec.vb:
   - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
     name: ReadProperty(Of TResult)
-    nameWithType: Builder(Of Image).ReadProperty(Of TResult)
-    fullName: PdfBuilder.Builder(Of iTextSharp.text.Image).ReadProperty(Of TResult)
+    nameWithType: Builder(Of PdfPTable).ReadProperty(Of TResult)
+    fullName: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).ReadProperty(Of TResult)
   - name: (
     nameWithType: (
     fullName: (
@@ -275,10 +273,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: iTextSharp.text.Image
-    name: Image
-    nameWithType: Image
-    fullName: iTextSharp.text.Image
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -753,16 +751,16 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.String
-  commentId: T:System.String
+- uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: PdfBuilder.ImageBuilder.#ctor*
-  commentId: Overload:PdfBuilder.ImageBuilder.#ctor
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: PdfBuilder.TableBuilder.#ctor*
+  commentId: Overload:PdfBuilder.TableBuilder.#ctor
   isExternal: false
-  name: ImageBuilder
-  nameWithType: ImageBuilder.ImageBuilder
-  fullName: PdfBuilder.ImageBuilder.ImageBuilder
+  name: TableBuilder
+  nameWithType: TableBuilder.TableBuilder
+  fullName: PdfBuilder.TableBuilder.TableBuilder

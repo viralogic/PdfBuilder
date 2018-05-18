@@ -13,6 +13,7 @@ items:
   - PdfBuilder.Pdf.Render(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)
   - PdfBuilder.Pdf.Render(System.IO.Stream)
   - PdfBuilder.Pdf.RenderHtml(System.String,System.IO.Stream)
+  - PdfBuilder.Pdf.Save(PdfBuilder.Interfaces.IPdfRenderer,System.String)
   - PdfBuilder.Pdf.Save(System.String)
   - PdfBuilder.Pdf.Set(System.Action{iTextSharp.text.Document})
   - PdfBuilder.Pdf.ToArray
@@ -244,19 +245,58 @@ items:
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
-  summary: "\nRenders content on the page using a renderer instance\n"
+  summary: "\nRenders content on the page using a renderer instance to a given stream\n"
   example: []
   syntax:
     content: public void Render(IPdfRenderer renderer, Stream stream)
     parameters:
     - id: renderer
       type: PdfBuilder.Interfaces.IPdfRenderer
-      description: Instance of object that implements of IPdfRenderer interface<xref href="PdfBuilder.Interfaces.IPdfRenderer" data-throw-if-not-resolved="false"></xref>
+      description: Instance of object that implements a IPdfRenderer interface<xref href="PdfBuilder.Interfaces.IPdfRenderer" data-throw-if-not-resolved="false"></xref>
     - id: stream
       type: System.IO.Stream
       description: Stream instance used to write pdf text to <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>
     content.vb: Public Sub Render(renderer As IPdfRenderer, stream As Stream)
   overload: PdfBuilder.Pdf.Render*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PdfBuilder.Pdf.Save(PdfBuilder.Interfaces.IPdfRenderer,System.String)
+  commentId: M:PdfBuilder.Pdf.Save(PdfBuilder.Interfaces.IPdfRenderer,System.String)
+  id: Save(PdfBuilder.Interfaces.IPdfRenderer,System.String)
+  parent: PdfBuilder.Pdf
+  langs:
+  - csharp
+  - vb
+  name: Save(IPdfRenderer, String)
+  nameWithType: Pdf.Save(IPdfRenderer, String)
+  fullName: PdfBuilder.Pdf.Save(PdfBuilder.Interfaces.IPdfRenderer, System.String)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Pdf.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Save
+    path: Pdf.cs
+    startLine: 90
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nSaves content on the page rendered by a renderer instance to a given file\n"
+  example: []
+  syntax:
+    content: public void Save(IPdfRenderer renderer, string fileName)
+    parameters:
+    - id: renderer
+      type: PdfBuilder.Interfaces.IPdfRenderer
+      description: 'Instance of object that implements a IPdfRenderer interface<xref href="PdfBuilder.Interfaces.IPdfRenderer" data-throw-if-not-resolved="false"></xref> '
+    - id: fileName
+      type: System.String
+      description: The name of the file to write PDF content to<xref href="System.String" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub Save(renderer As IPdfRenderer, fileName As String)
+  overload: PdfBuilder.Pdf.Save*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -279,7 +319,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: RenderHtml
     path: Pdf.cs
-    startLine: 94
+    startLine: 103
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -318,7 +358,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Render
     path: Pdf.cs
-    startLine: 111
+    startLine: 120
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -354,7 +394,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: ToArray
     path: Pdf.cs
-    startLine: 128
+    startLine: 137
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -389,7 +429,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Save
     path: Pdf.cs
-    startLine: 155
+    startLine: 164
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -426,7 +466,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: Pdf.cs
-    startLine: 170
+    startLine: 179
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -464,7 +504,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Dispose
     path: Pdf.cs
-    startLine: 186
+    startLine: 195
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -1241,6 +1281,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: PdfBuilder.Pdf.Save*
+  commentId: Overload:PdfBuilder.Pdf.Save
+  isExternal: false
+  name: Save
+  nameWithType: Pdf.Save
+  fullName: PdfBuilder.Pdf.Save
 - uid: PdfBuilder.Pdf.RenderHtml*
   commentId: Overload:PdfBuilder.Pdf.RenderHtml
   isExternal: false
@@ -1280,12 +1326,6 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: PdfBuilder.Pdf.Save*
-  commentId: Overload:PdfBuilder.Pdf.Save
-  isExternal: false
-  name: Save
-  nameWithType: Pdf.Save
-  fullName: PdfBuilder.Pdf.Save
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System

@@ -21,7 +21,13 @@
   "PdfBuilder.Pdf.Render(PdfBuilder.Interfaces.IPdfRenderer,System.IO.Stream)": "PdfBuilder.Pdf.yml",
   "PdfBuilder.Pdf.Render(System.IO.Stream)": "PdfBuilder.Pdf.yml",
   "PdfBuilder.Pdf.RenderHtml(System.String,System.IO.Stream)": "PdfBuilder.Pdf.yml",
+  "PdfBuilder.Pdf.Save(PdfBuilder.Interfaces.IPdfRenderer,System.String)": "PdfBuilder.Pdf.yml",
   "PdfBuilder.Pdf.Save(System.String)": "PdfBuilder.Pdf.yml",
   "PdfBuilder.Pdf.Set(System.Action{iTextSharp.text.Document})": "PdfBuilder.Pdf.yml",
-  "PdfBuilder.Pdf.ToArray": "PdfBuilder.Pdf.yml"
+  "PdfBuilder.Pdf.ToArray": "PdfBuilder.Pdf.yml",
+  "PdfBuilder.TableBuilder": "PdfBuilder.TableBuilder.yml",
+  "PdfBuilder.TableBuilder.#ctor(System.Int32)": "PdfBuilder.TableBuilder.yml",
+  "PdfBuilder.TableRowBuilder": "PdfBuilder.TableRowBuilder.yml",
+  "PdfBuilder.TableRowBuilder.#ctor(System.Collections.Generic.IEnumerable{iTextSharp.text.pdf.PdfPCell})": "PdfBuilder.TableRowBuilder.yml",
+  "PdfBuilder.TableRowBuilder.#ctor(System.Collections.Generic.IEnumerable{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPCell}})": "PdfBuilder.TableRowBuilder.yml"
 }

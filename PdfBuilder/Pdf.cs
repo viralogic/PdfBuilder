@@ -73,17 +73,26 @@ namespace PdfBuilder
         }
 
         /// <summary>
-        /// Renders content on the page using a renderer instance
+        /// Renders content on the page using a renderer instance to a given stream
         /// </summary>
-        /// <param name="renderer">Instance of object that implements of IPdfRenderer interface<see cref="PdfBuilder.Interfaces.IPdfRenderer"/></param>
+        /// <param name="renderer">Instance of object that implements a IPdfRenderer interface<see cref="PdfBuilder.Interfaces.IPdfRenderer"/></param>
         /// <param name="stream">Stream instance used to write pdf text to <see cref="System.IO.Stream"/></param>
         public void Render(IPdfRenderer renderer, Stream stream)
         {
-            using (var writer = PdfWriter.GetInstance(this.Instance, stream))
+            renderer.RenderPdf(this);
+            this.Render(stream);
+        }
+
+        /// <summary>
+        /// Saves content on the page rendered by a renderer instance to a given file
+        /// </summary>
+        /// <param name="renderer">Instance of object that implements a IPdfRenderer interface<see cref="PdfBuilder.Interfaces.IPdfRenderer"/> </param>
+        /// <param name = "fileName" > The name of the file to write PDF content to<see cref="System.String"/></param>
+        public void Save(IPdfRenderer renderer, string fileName)
+        {
+            using (var f = File.Create(fileName))
             {
-                this.Instance.Open();
-                renderer.RenderPdf(this);
-                this.Instance.Close();
+                this.Render(renderer, f);
             }
         }
 

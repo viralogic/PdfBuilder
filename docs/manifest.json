@@ -1,15 +1,124 @@
 {
   "homepages": [],
-  "files": [],
+  "source_base_path": "D:/Projects/PdfBuilder/PdfBuilder",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.Builder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.Builder-1.html",
+          "hash": "fM6JCLXRVgsymw5nLxZz6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.ImageBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.ImageBuilder.html",
+          "hash": "i0b6mmeNbd6WuKW64h2aQw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.Interfaces.IPdfRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.Interfaces.IPdfRenderer.html",
+          "hash": "bc2WYZ+fpUHmB8zt/2czeQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.Interfaces.html",
+          "hash": "MieaRXfXrLwiJb2azPhfVQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.PdfBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.PdfBuilder.html",
+          "hash": "Abg4d11WbdWEhzkBQT41AQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PdfBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.html",
+          "hash": "qlWuqSJhmqSqdwUBhAO0Fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ysgVtVuTVqNe9yWPQTge6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}
     }
   ],
-  "version_info": {}
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
 }
