@@ -54,6 +54,7 @@
     <Compile Include="Builders\ParagraphBuilderTest.cs" />
     <Compile Include="Builders\ImageBuilderTest.cs" />
     <Compile Include="Builders\PdfTest.cs" />
+    <Compile Include="Builders\TableBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\HelloWorldRenderer.cs" />
   </ItemGroup>

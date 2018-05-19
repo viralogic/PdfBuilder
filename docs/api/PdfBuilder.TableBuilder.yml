@@ -6,6 +6,8 @@ items:
   parent: PdfBuilder
   children:
   - PdfBuilder.TableBuilder.#ctor(System.Int32)
+  - PdfBuilder.TableBuilder.Add(iTextSharp.text.pdf.PdfPRow)
+  - PdfBuilder.TableBuilder.Add(PdfBuilder.TableRowBuilder)
   langs:
   - csharp
   - vb
@@ -20,10 +22,12 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: TableBuilder
     path: TableBuilder.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
+  summary: "\nHandles building PDF tables\n"
+  example: []
   syntax:
     content: 'public class TableBuilder : Builder<PdfPTable>'
     content.vb: >-
@@ -67,7 +71,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: .ctor
     path: TableBuilder.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -81,6 +85,84 @@ items:
       description: The number of columns in the table <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>
     content.vb: Public Sub New(numColumns As Integer)
   overload: PdfBuilder.TableBuilder.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PdfBuilder.TableBuilder.Add(PdfBuilder.TableRowBuilder)
+  commentId: M:PdfBuilder.TableBuilder.Add(PdfBuilder.TableRowBuilder)
+  id: Add(PdfBuilder.TableRowBuilder)
+  parent: PdfBuilder.TableBuilder
+  langs:
+  - csharp
+  - vb
+  name: Add(TableRowBuilder)
+  nameWithType: TableBuilder.Add(TableRowBuilder)
+  fullName: PdfBuilder.TableBuilder.Add(PdfBuilder.TableRowBuilder)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/TableBuilder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Add
+    path: TableBuilder.cs
+    startLine: 28
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nAdds a row to the table\n"
+  example: []
+  syntax:
+    content: public TableBuilder Add(TableRowBuilder row)
+    parameters:
+    - id: row
+      type: PdfBuilder.TableRowBuilder
+      description: An instance of a Builder row <xref href="PdfBuilder.Builder%601" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: PdfBuilder.TableBuilder
+      description: <xref href="PdfBuilder.TableBuilder" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function Add(row As TableRowBuilder) As TableBuilder
+  overload: PdfBuilder.TableBuilder.Add*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: PdfBuilder.TableBuilder.Add(iTextSharp.text.pdf.PdfPRow)
+  commentId: M:PdfBuilder.TableBuilder.Add(iTextSharp.text.pdf.PdfPRow)
+  id: Add(iTextSharp.text.pdf.PdfPRow)
+  parent: PdfBuilder.TableBuilder
+  langs:
+  - csharp
+  - vb
+  name: Add(PdfPRow)
+  nameWithType: TableBuilder.Add(PdfPRow)
+  fullName: PdfBuilder.TableBuilder.Add(iTextSharp.text.pdf.PdfPRow)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/TableBuilder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Add
+    path: TableBuilder.cs
+    startLine: 38
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nAdds a row to the table\n"
+  example: []
+  syntax:
+    content: public TableBuilder Add(PdfPRow row)
+    parameters:
+    - id: row
+      type: iTextSharp.text.pdf.PdfPRow
+      description: An instance of a PdfPRow <xref href="iTextSharp.text.pdf.PdfPRow" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: PdfBuilder.TableBuilder
+      description: <xref href="PdfBuilder.TableBuilder" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function Add(row As PdfPRow) As TableBuilder
+  overload: PdfBuilder.TableBuilder.Add*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -764,3 +846,36 @@ references:
   name: TableBuilder
   nameWithType: TableBuilder.TableBuilder
   fullName: PdfBuilder.TableBuilder.TableBuilder
+- uid: PdfBuilder.TableBuilder
+  commentId: T:PdfBuilder.TableBuilder
+  parent: PdfBuilder
+  isExternal: false
+  name: TableBuilder
+  nameWithType: TableBuilder
+  fullName: PdfBuilder.TableBuilder
+- uid: PdfBuilder.TableBuilder.Add*
+  commentId: Overload:PdfBuilder.TableBuilder.Add
+  isExternal: false
+  name: Add
+  nameWithType: TableBuilder.Add
+  fullName: PdfBuilder.TableBuilder.Add
+- uid: PdfBuilder.TableRowBuilder
+  commentId: T:PdfBuilder.TableRowBuilder
+  parent: PdfBuilder
+  isExternal: false
+  name: TableRowBuilder
+  nameWithType: TableRowBuilder
+  fullName: PdfBuilder.TableRowBuilder
+- uid: iTextSharp.text.pdf.PdfPRow
+  commentId: T:iTextSharp.text.pdf.PdfPRow
+  parent: iTextSharp.text.pdf
+  isExternal: true
+  name: PdfPRow
+  nameWithType: PdfPRow
+  fullName: iTextSharp.text.pdf.PdfPRow
+- uid: iTextSharp.text.pdf
+  commentId: N:iTextSharp.text.pdf
+  isExternal: false
+  name: iTextSharp.text.pdf
+  nameWithType: iTextSharp.text.pdf
+  fullName: iTextSharp.text.pdf

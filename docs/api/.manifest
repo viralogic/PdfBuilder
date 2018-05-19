@@ -27,6 +27,8 @@
   "PdfBuilder.Pdf.ToArray": "PdfBuilder.Pdf.yml",
   "PdfBuilder.TableBuilder": "PdfBuilder.TableBuilder.yml",
   "PdfBuilder.TableBuilder.#ctor(System.Int32)": "PdfBuilder.TableBuilder.yml",
+  "PdfBuilder.TableBuilder.Add(iTextSharp.text.pdf.PdfPRow)": "PdfBuilder.TableBuilder.yml",
+  "PdfBuilder.TableBuilder.Add(PdfBuilder.TableRowBuilder)": "PdfBuilder.TableBuilder.yml",
   "PdfBuilder.TableRowBuilder": "PdfBuilder.TableRowBuilder.yml",
   "PdfBuilder.TableRowBuilder.#ctor(System.Collections.Generic.IEnumerable{iTextSharp.text.pdf.PdfPCell})": "PdfBuilder.TableRowBuilder.yml",
   "PdfBuilder.TableRowBuilder.#ctor(System.Collections.Generic.IEnumerable{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPCell}})": "PdfBuilder.TableRowBuilder.yml"

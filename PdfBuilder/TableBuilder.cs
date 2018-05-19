@@ -20,5 +20,26 @@ namespace PdfBuilder
         {
             this.Instance = new PdfPTable(numColumns);
         }
+
+        /// <summary>
+        /// Adds a row to the table
+        /// </summary>
+        /// <param name="row">An instance of a Builder row <see cref="Builder{PdfPRow}"/></param>
+        /// <returns><see cref="TableBuilder"/></returns>
+        public TableBuilder Add(TableRowBuilder row)
+        {
+            return this.Add(row.Instance);
+        }
+
+        /// <summary>
+        /// Adds a row to the table
+        /// </summary>
+        /// <param name="row">An instance of a PdfPRow <see cref="PdfPRow"/></param>
+        /// <returns><see cref="TableBuilder"/></returns>
+        public TableBuilder Add(PdfPRow row)
+        {
+            this.Set(t => { t.Rows.Add(row); });
+            return this;
+        }
     }
 }

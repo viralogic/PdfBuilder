@@ -72,12 +72,14 @@ references:
   fullName: PdfBuilder.Pdf
 - uid: PdfBuilder.TableBuilder
   commentId: T:PdfBuilder.TableBuilder
+  parent: PdfBuilder
   isExternal: false
   name: TableBuilder
   nameWithType: TableBuilder
   fullName: PdfBuilder.TableBuilder
 - uid: PdfBuilder.TableRowBuilder
   commentId: T:PdfBuilder.TableRowBuilder
+  parent: PdfBuilder
   isExternal: false
   name: TableRowBuilder
   nameWithType: TableRowBuilder
