@@ -10,14 +10,14 @@ namespace PdfBuilderTest.Builders
     {
         private const string IMG_FILE_PATH = @"..\Images\20180330_110345-COLLAGE_Crop.jpg";
 
-        [TestMethod, TestCategory("Images")]
+        [TestMethod]
         public void LogoTest()
         {
             var imageBuilder = new ImageBuilder(IMG_FILE_PATH);
             Assert.IsTrue((bool)imageBuilder.ReadProperty(i => i.IsJpeg()));
         }
 
-        [TestMethod, TestCategory("Images")]
+        [TestMethod]
         public void ScaleTest()
         {
             var imageBuilder = new ImageBuilder(IMG_FILE_PATH);
