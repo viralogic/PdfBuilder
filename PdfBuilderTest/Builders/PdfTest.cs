@@ -31,6 +31,10 @@ namespace PdfBuilderTest.Builders
         public void SaveTest()
         {
             var fileName = @"..\..\Files\HelloWorld.pdf";
+            if (!Directory.Exists(@"..\..\Files"))
+            {
+                Directory.CreateDirectory(@"..\..\Files");
+            }
             new Pdf(PageSize.A4).Add(new Builder<Paragraph>("Hello world!")).Save(fileName);
             var exists = File.Exists(fileName);
             Assert.IsTrue(File.Exists(fileName));
@@ -59,6 +63,10 @@ namespace PdfBuilderTest.Builders
             }
 
             var fileName = @"..\..\Files\HelloWorldRenderer.pdf";
+            if (!Directory.Exists(@"..\..\Files"))
+            {
+                Directory.CreateDirectory(@"..\..\Files");
+            }
 
             using (var f = File.Create(fileName))
             {
@@ -84,6 +92,10 @@ namespace PdfBuilderTest.Builders
         public void RenderSaveTest()
         {
             var fileName = @"..\..\Files\HelloWorldRenderer.pdf";
+            if (!Directory.Exists(@"..\..\Files"))
+            {
+                Directory.CreateDirectory(@"..\..\Files");
+            }
             new Pdf(PageSize.A4).Add(new Builder<Paragraph>("Hello World!")).Save(new HelloWorldRenderer(), fileName);
             var exists = File.Exists(fileName);
             Assert.IsTrue(File.Exists(fileName));
