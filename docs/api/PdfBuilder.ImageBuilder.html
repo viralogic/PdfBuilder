@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageBuilder
    ">
-    <meta name="generator" content="docfx 2.35.4.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,8 @@
   
   <h1 id="PdfBuilder_ImageBuilder" data-uid="PdfBuilder.ImageBuilder" class="text-break">Class ImageBuilder
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Handles PDF images</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -81,16 +82,32 @@
     <div class="level1"><a class="xref" href="PdfBuilder.Builder-1.html">Builder</a>&lt;<span class="xref">iTextSharp.text.Image</span>&gt;</div>
     <div class="level2"><span class="xref">ImageBuilder</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PdfBuilder.Interfaces.IITextSharpInstance.html">IITextSharpInstance</a></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Instance">Builder&lt;Image&gt;.Instance</a>
     </div>
     <div>
+      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_PageBreakBefore">Builder&lt;Image&gt;.PageBreakBefore</a>
+    </div>
+    <div>
+      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_PageBreakAfter">Builder&lt;Image&gt;.PageBreakAfter</a>
+    </div>
+    <div>
       <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_Set_System_Action__0__">Builder&lt;Image&gt;.Set(Action&lt;Image&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_ReadProperty_System_Func__0_System_Object__">Builder&lt;Image&gt;.ReadProperty(Func&lt;Image, Object&gt;)</a>
+      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_SetBuilder_System_Action_PdfBuilder_Builder__0___">Builder&lt;Image&gt;.SetBuilder(Action&lt;Builder&lt;Image&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_ReadProperty__1_System_Func__0___0__">Builder&lt;Image&gt;.ReadProperty&lt;TResult&gt;(Func&lt;Image, TResult&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="PdfBuilder.Builder-1.html#PdfBuilder_Builder_1_ReadBuilder__1_System_Func_PdfBuilder_Builder__0____0__">Builder&lt;Image&gt;.ReadBuilder&lt;TResult&gt;(Func&lt;Builder&lt;Image&gt;, TResult&gt;)</a>
     </div>
     <div>
       <span class="xref">System.Object.ToString()</span>
@@ -118,7 +135,7 @@
   <h6><strong>Assembly</strong>: PdfBuilder.dll</h6>
   <h5 id="PdfBuilder_ImageBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ImageBuilder : Builder&lt;Image&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ImageBuilder : Builder&lt;Image&gt;, IITextSharpInstance</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -127,11 +144,12 @@
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_ImageBuilder__ctor_System_String_.md&amp;value=---%0Auid%3A%20PdfBuilder.ImageBuilder.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/ImageBuilder.cs/#L12">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/ImageBuilder.cs/#L19">View Source</a>
   </span>
   <a id="PdfBuilder_ImageBuilder__ctor_" data-uid="PdfBuilder.ImageBuilder.#ctor*"></a>
   <h4 id="PdfBuilder_ImageBuilder__ctor_System_String_" data-uid="PdfBuilder.ImageBuilder.#ctor(System.String)">ImageBuilder(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs an ImageBuilder instance from a file name</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -150,10 +168,15 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">filePath</span></td>
-        <td></td>
+        <td><p>The full path to the file<span class="xref">System.String</span></p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PdfBuilder.Interfaces.IITextSharpInstance.html">IITextSharpInstance</a>
+  </div>
 </article>
           </div>
           
@@ -165,7 +188,7 @@
                     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_ImageBuilder.md&amp;value=---%0Auid%3A%20PdfBuilder.ImageBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/ImageBuilder.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/ImageBuilder.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

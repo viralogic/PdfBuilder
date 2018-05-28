@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Builder.cs" />
     <Compile Include="ImageBuilder.cs" />
+    <Compile Include="Interfaces\IITextSharpInstance.cs" />
     <Compile Include="Interfaces\IPdfRenderer.cs" />
     <Compile Include="Pdf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

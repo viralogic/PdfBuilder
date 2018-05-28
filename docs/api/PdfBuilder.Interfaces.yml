@@ -4,6 +4,7 @@ items:
   commentId: N:PdfBuilder.Interfaces
   id: PdfBuilder.Interfaces
   children:
+  - PdfBuilder.Interfaces.IITextSharpInstance
   - PdfBuilder.Interfaces.IPdfRenderer
   langs:
   - csharp
@@ -15,6 +16,13 @@ items:
   assemblies:
   - PdfBuilder
 references:
+- uid: PdfBuilder.Interfaces.IITextSharpInstance
+  commentId: T:PdfBuilder.Interfaces.IITextSharpInstance
+  parent: PdfBuilder.Interfaces
+  isExternal: false
+  name: IITextSharpInstance
+  nameWithType: IITextSharpInstance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance
 - uid: PdfBuilder.Interfaces.IPdfRenderer
   commentId: T:PdfBuilder.Interfaces.IPdfRenderer
   parent: PdfBuilder.Interfaces

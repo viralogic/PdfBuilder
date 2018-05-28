@@ -9,8 +9,12 @@ items:
   - PdfBuilder.Builder`1.#ctor(`0)
   - PdfBuilder.Builder`1.#ctor(System.Object[])
   - PdfBuilder.Builder`1.Instance
+  - PdfBuilder.Builder`1.PageBreakAfter
+  - PdfBuilder.Builder`1.PageBreakBefore
+  - PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
   - PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
   - PdfBuilder.Builder`1.Set(System.Action{`0})
+  - PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
   langs:
   - csharp
   - vb
@@ -25,17 +29,19 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Builder
     path: Builder.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
   summary: "\nWrapper around and underlying instance of T where T is an IElement\n"
   example: []
   syntax:
-    content: public class Builder<T>
+    content: 'public class Builder<T> : IITextSharpInstance'
     typeParameters:
     - id: T
-    content.vb: Public Class Builder(Of T)
+    content.vb: >-
+      Public Class Builder(Of T)
+          Implements IITextSharpInstance
   inheritance:
   - System.Object
   derivedClasses:
@@ -43,6 +49,8 @@ items:
   - PdfBuilder.Pdf
   - PdfBuilder.TableBuilder
   - PdfBuilder.TableRowBuilder
+  implements:
+  - PdfBuilder.Interfaces.IITextSharpInstance
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -78,25 +86,113 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Instance
     path: Builder.cs
-    startLine: 15
+    startLine: 22
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
+  summary: "\nThe underlying instance of <see cref=\"!:T\"></see>\n"
+  example: []
   syntax:
-    content: public T Instance { get; set; }
+    content: public dynamic Instance { get; protected set; }
     parameters: []
     return:
-      type: '{T}'
-    content.vb: Public Property Instance As T
+      type: System.Object
+    content.vb: Public Property Instance As Object
   overload: PdfBuilder.Builder`1.Instance*
+  implements:
+  - PdfBuilder.Interfaces.IITextSharpInstance.Instance
   nameWithType.vb: Builder(Of T).Instance
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+  fullName.vb: PdfBuilder.Builder(Of T).Instance
+- uid: PdfBuilder.Builder`1.PageBreakBefore
+  commentId: P:PdfBuilder.Builder`1.PageBreakBefore
+  id: PageBreakBefore
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: PageBreakBefore
+  nameWithType: Builder<T>.PageBreakBefore
+  fullName: PdfBuilder.Builder<T>.PageBreakBefore
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: PageBreakBefore
+    path: Builder.cs
+    startLine: 29
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nPage break before the Builder instance\nThe default is set to false (no page break)\n"
+  example: []
+  syntax:
+    content: public bool PageBreakBefore { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PageBreakBefore As Boolean
+  overload: PdfBuilder.Builder`1.PageBreakBefore*
+  implements:
+  - PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  nameWithType.vb: Builder(Of T).PageBreakBefore
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-  fullName.vb: PdfBuilder.Builder(Of T).Instance
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakBefore
+- uid: PdfBuilder.Builder`1.PageBreakAfter
+  commentId: P:PdfBuilder.Builder`1.PageBreakAfter
+  id: PageBreakAfter
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: PageBreakAfter
+  nameWithType: Builder<T>.PageBreakAfter
+  fullName: PdfBuilder.Builder<T>.PageBreakAfter
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: PageBreakAfter
+    path: Builder.cs
+    startLine: 39
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nPage break after the Builder instance.\nThe default is set to false (no page break)\n"
+  example: []
+  syntax:
+    content: public bool PageBreakAfter { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PageBreakAfter As Boolean
+  overload: PdfBuilder.Builder`1.PageBreakAfter*
+  implements:
+  - PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  nameWithType.vb: Builder(Of T).PageBreakAfter
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakAfter
 - uid: PdfBuilder.Builder`1.#ctor
   commentId: M:PdfBuilder.Builder`1.#ctor
   id: '#ctor'
@@ -115,7 +211,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: .ctor
     path: Builder.cs
-    startLine: 21
+    startLine: 49
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -149,7 +245,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: .ctor
     path: Builder.cs
-    startLine: 33
+    startLine: 61
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -188,7 +284,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: .ctor
     path: Builder.cs
-    startLine: 54
+    startLine: 82
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -226,7 +322,7 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: Set
     path: Builder.cs
-    startLine: 77
+    startLine: 105
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
@@ -251,6 +347,48 @@ items:
   - Public
   fullName.vb: PdfBuilder.Builder(Of T).Set(System.Action(Of T))
   name.vb: Set(Action(Of T))
+- uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  commentId: M:PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  id: SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: SetBuilder(Action<Builder<T>>)
+  nameWithType: Builder<T>.SetBuilder(Action<Builder<T>>)
+  fullName: PdfBuilder.Builder<T>.SetBuilder(System.Action<PdfBuilder.Builder<T>>)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: SetBuilder
+    path: Builder.cs
+    startLine: 116
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nExecute an action on <xref href=\"PdfBuilder.Builder%601\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public Builder<T> SetBuilder(Action<Builder<T>> cb)
+    parameters:
+    - id: cb
+      type: System.Action{PdfBuilder.Builder`1}
+      description: Callback to execute to set properties of the Builder instance <xref href="System.Action%601" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: PdfBuilder.Builder`1
+      description: <xref href="PdfBuilder.Builder%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function SetBuilder(cb As Action(Of Builder(Of T))) As Builder(Of T)
+  overload: PdfBuilder.Builder`1.SetBuilder*
+  nameWithType.vb: Builder(Of T).SetBuilder(Action(Of Builder(Of T)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).SetBuilder(System.Action(Of PdfBuilder.Builder(Of T)))
+  name.vb: SetBuilder(Action(Of Builder(Of T)))
 - uid: PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
   commentId: M:PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})
   id: ReadProperty``1(System.Func{`0,``0})
@@ -269,13 +407,13 @@ items:
       repo: https://github.com/viralogic/PdfBuilder.git
     id: ReadProperty
     path: Builder.cs
-    startLine: 98
+    startLine: 137
   assemblies:
   - PdfBuilder
   namespace: PdfBuilder
   summary: "\nRead properties of T\n"
   example:
-  - "\n<pre><code>To return a value from T:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn builder.Read(p => p.Content); // Returns &quot;Some text&quot;</code></pre>\n"
+  - "\n<pre><code>To return a value from T:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn builder.ReadProperty(p => p.Content); // Returns &quot;Some text&quot;</code></pre>\n"
   syntax:
     content: public TResult ReadProperty<TResult>(Func<T, TResult> cb)
     parameters:
@@ -297,6 +435,52 @@ items:
   - Public
   fullName.vb: PdfBuilder.Builder(Of T).ReadProperty(Of TResult)(System.Func(Of T, TResult))
   name.vb: ReadProperty(Of TResult)(Func(Of T, TResult))
+- uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  commentId: M:PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  id: ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  parent: PdfBuilder.Builder`1
+  langs:
+  - csharp
+  - vb
+  name: ReadBuilder<TResult>(Func<Builder<T>, TResult>)
+  nameWithType: Builder<T>.ReadBuilder<TResult>(Func<Builder<T>, TResult>)
+  fullName: PdfBuilder.Builder<T>.ReadBuilder<TResult>(System.Func<PdfBuilder.Builder<T>, TResult>)
+  type: Method
+  source:
+    remote:
+      path: PdfBuilder/Builder.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: ReadBuilder
+    path: Builder.cs
+    startLine: 157
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder
+  summary: "\nRead properties of this <xref href=\"PdfBuilder.Builder%601\" data-throw-if-not-resolved=\"false\"></xref> instance\n"
+  example:
+  - "\n<pre><code>To return a value from this Builder instance:\n\nvar builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);\nreturn builder.ReadProperty(p => p.PageBreakAfter);</code></pre>\n"
+  syntax:
+    content: public TResult ReadBuilder<TResult>(Func<Builder<T>, TResult> cb)
+    parameters:
+    - id: cb
+      type: System.Func{PdfBuilder.Builder`1,{TResult}}
+      description: Callback to execute on <xref href="System.Func%602" data-throw-if-not-resolved="false"></xref>
+    typeParameters:
+    - id: TResult
+      description: ''
+    return:
+      type: '{TResult}'
+      description: The return value of the callback
+    content.vb: Public Function ReadBuilder(Of TResult)(cb As Func(Of Builder(Of T), TResult)) As TResult
+  overload: PdfBuilder.Builder`1.ReadBuilder*
+  nameWithType.vb: Builder(Of T).ReadBuilder(Of TResult)(Func(Of Builder(Of T), TResult))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: PdfBuilder.Builder(Of T).ReadBuilder(Of TResult)(System.Func(Of PdfBuilder.Builder(Of T), TResult))
+  name.vb: ReadBuilder(Of TResult)(Func(Of Builder(Of T), TResult))
 references:
 - uid: PdfBuilder
   commentId: N:PdfBuilder
@@ -311,6 +495,13 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: PdfBuilder.Interfaces.IITextSharpInstance
+  commentId: T:PdfBuilder.Interfaces.IITextSharpInstance
+  parent: PdfBuilder.Interfaces
+  isExternal: false
+  name: IITextSharpInstance
+  nameWithType: IITextSharpInstance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -596,6 +787,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: PdfBuilder.Interfaces
+  commentId: N:PdfBuilder.Interfaces
+  isExternal: false
+  name: PdfBuilder.Interfaces
+  nameWithType: PdfBuilder.Interfaces
+  fullName: PdfBuilder.Interfaces
 - uid: PdfBuilder.Builder`1.Instance*
   commentId: Overload:PdfBuilder.Builder`1.Instance
   isExternal: false
@@ -604,17 +801,50 @@ references:
   fullName: PdfBuilder.Builder<T>.Instance
   nameWithType.vb: Builder(Of T).Instance
   fullName.vb: PdfBuilder.Builder(Of T).Instance
-- uid: '{T}'
-  commentId: '!:T'
-  definition: T
-  name: T
-  nameWithType: T
-  fullName: T
-- uid: T
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
   isExternal: false
-  name: T
-  nameWithType: T
-  fullName: T
+  name: Instance
+  nameWithType: IITextSharpInstance.Instance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.Instance
+- uid: PdfBuilder.Builder`1.PageBreakBefore*
+  commentId: Overload:PdfBuilder.Builder`1.PageBreakBefore
+  isExternal: false
+  name: PageBreakBefore
+  nameWithType: Builder<T>.PageBreakBefore
+  fullName: PdfBuilder.Builder<T>.PageBreakBefore
+  nameWithType.vb: Builder(Of T).PageBreakBefore
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakBefore
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
+  isExternal: false
+  name: PageBreakBefore
+  nameWithType: IITextSharpInstance.PageBreakBefore
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PdfBuilder.Builder`1.PageBreakAfter*
+  commentId: Overload:PdfBuilder.Builder`1.PageBreakAfter
+  isExternal: false
+  name: PageBreakAfter
+  nameWithType: Builder<T>.PageBreakAfter
+  fullName: PdfBuilder.Builder<T>.PageBreakAfter
+  nameWithType.vb: Builder(Of T).PageBreakAfter
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakAfter
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
+  isExternal: false
+  name: PageBreakAfter
+  nameWithType: IITextSharpInstance.PageBreakAfter
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
 - uid: PdfBuilder.Builder`1.#ctor*
   commentId: Overload:PdfBuilder.Builder`1.#ctor
   isExternal: false
@@ -650,6 +880,18 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  commentId: '!:T'
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -775,6 +1017,74 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: PdfBuilder.Builder`1.SetBuilder*
+  commentId: Overload:PdfBuilder.Builder`1.SetBuilder
+  isExternal: false
+  name: SetBuilder
+  nameWithType: Builder<T>.SetBuilder
+  fullName: PdfBuilder.Builder<T>.SetBuilder
+  nameWithType.vb: Builder(Of T).SetBuilder
+  fullName.vb: PdfBuilder.Builder(Of T).SetBuilder
+- uid: System.Action{PdfBuilder.Builder`1}
+  commentId: T:System.Action{PdfBuilder.Builder`1}
+  parent: System
+  definition: System.Action`1
+  name: Action<Builder<T>>
+  nameWithType: Action<Builder<T>>
+  fullName: System.Action<PdfBuilder.Builder<T>>
+  nameWithType.vb: Action(Of Builder(Of T))
+  fullName.vb: System.Action(Of PdfBuilder.Builder(Of T))
+  name.vb: Action(Of Builder(Of T))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Func`2
   commentId: T:System.Func`2
   isExternal: true
@@ -893,8 +1203,87 @@ references:
   nameWithType: TResult
   fullName: TResult
 - uid: TResult
-  commentId: '!:TResult'
   isExternal: false
   name: TResult
   nameWithType: TResult
   fullName: TResult
+- uid: PdfBuilder.Builder`1.ReadBuilder*
+  commentId: Overload:PdfBuilder.Builder`1.ReadBuilder
+  isExternal: false
+  name: ReadBuilder
+  nameWithType: Builder<T>.ReadBuilder
+  fullName: PdfBuilder.Builder<T>.ReadBuilder
+  nameWithType.vb: Builder(Of T).ReadBuilder
+  fullName.vb: PdfBuilder.Builder(Of T).ReadBuilder
+- uid: System.Func{PdfBuilder.Builder`1,{TResult}}
+  commentId: T:System.Func{PdfBuilder.Builder`1,``0}
+  parent: System
+  definition: System.Func`2
+  name: Func<Builder<T>, TResult>
+  nameWithType: Func<Builder<T>, TResult>
+  fullName: System.Func<PdfBuilder.Builder<T>, TResult>
+  nameWithType.vb: Func(Of Builder(Of T), TResult)
+  fullName.vb: System.Func(Of PdfBuilder.Builder(Of T), TResult)
+  name.vb: Func(Of Builder(Of T), TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )

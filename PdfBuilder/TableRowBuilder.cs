@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using iTextSharp.text.pdf;
+using PdfBuilder.Interfaces;
 
 namespace PdfBuilder
 {
@@ -18,8 +19,13 @@ namespace PdfBuilder
         /// </summary>
         /// <param name="cells">A list of PdfPCell builders <see cref="IEnumerable{Builder{PdfPCell}}"/></param>
         public TableRowBuilder(IEnumerable<Builder<PdfPCell>> cells)
-            : this(cells.Select(c => c.Instance))
         {
+            var rowCells = new List<PdfPCell>();
+            foreach(var c in cells)
+            {
+                rowCells.Add(c.Instance);
+            }
+            this.Instance = new PdfPRow(rowCells.ToArray());
         }
 
         /// <summary>

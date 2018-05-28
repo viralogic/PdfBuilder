@@ -29,17 +29,24 @@ items:
   summary: "\nHandles building PDF tables\n"
   example: []
   syntax:
-    content: 'public class TableBuilder : Builder<PdfPTable>'
+    content: 'public class TableBuilder : Builder<PdfPTable>, IITextSharpInstance'
     content.vb: >-
       Public Class TableBuilder
           Inherits Builder(Of PdfPTable)
+          Implements IITextSharpInstance
   inheritance:
   - System.Object
   - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  implements:
+  - PdfBuilder.Interfaces.IITextSharpInstance
   inheritedMembers:
   - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakBefore
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakAfter
   - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.SetBuilder(System.Action{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}})
   - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadProperty``1(System.Func{iTextSharp.text.pdf.PdfPTable,{TResult}})
+  - PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadBuilder``1(System.Func{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable},{TResult}})
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -223,6 +230,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: PdfBuilder.Interfaces.IITextSharpInstance
+  commentId: T:PdfBuilder.Interfaces.IITextSharpInstance
+  parent: PdfBuilder.Interfaces
+  isExternal: false
+  name: IITextSharpInstance
+  nameWithType: IITextSharpInstance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance
 - uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
   commentId: P:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Instance
   parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
@@ -232,6 +246,24 @@ references:
   fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.Instance
   nameWithType.vb: Builder(Of PdfPTable).Instance
   fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).Instance
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakBefore
+  commentId: P:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakBefore
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  definition: PdfBuilder.Builder`1.PageBreakBefore
+  name: PageBreakBefore
+  nameWithType: Builder<PdfPTable>.PageBreakBefore
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.PageBreakBefore
+  nameWithType.vb: Builder(Of PdfPTable).PageBreakBefore
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).PageBreakBefore
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakAfter
+  commentId: P:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.PageBreakAfter
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  definition: PdfBuilder.Builder`1.PageBreakAfter
+  name: PageBreakAfter
+  nameWithType: Builder<PdfPTable>.PageBreakAfter
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.PageBreakAfter
+  nameWithType.vb: Builder(Of PdfPTable).PageBreakAfter
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).PageBreakAfter
 - uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
   commentId: M:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.Set(System.Action{iTextSharp.text.pdf.PdfPTable})
   parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
@@ -290,6 +322,90 @@ references:
     nameWithType: PdfPTable
     fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.SetBuilder(System.Action{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}})
+  commentId: M:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.SetBuilder(System.Action{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}})
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  definition: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  name: SetBuilder(Action<Builder<PdfPTable>>)
+  nameWithType: Builder<PdfPTable>.SetBuilder(Action<Builder<PdfPTable>>)
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.SetBuilder(System.Action<PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>>)
+  nameWithType.vb: Builder(Of PdfPTable).SetBuilder(Action(Of Builder(Of PdfPTable)))
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).SetBuilder(System.Action(Of PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable)))
+  name.vb: SetBuilder(Action(Of Builder(Of PdfPTable)))
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+    name: SetBuilder
+    nameWithType: Builder<PdfPTable>.SetBuilder
+    fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.SetBuilder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+    name: SetBuilder
+    nameWithType: Builder(Of PdfPTable).SetBuilder
+    fullName: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).SetBuilder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: )
     nameWithType: )
     fullName: )
@@ -360,6 +476,102 @@ references:
     nameWithType: PdfPTable
     fullName: iTextSharp.text.pdf.PdfPTable
     isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadBuilder``1(System.Func{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable},{TResult}})
+  commentId: M:PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}.ReadBuilder``1(System.Func{PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable},``0})
+  parent: PdfBuilder.Builder{iTextSharp.text.pdf.PdfPTable}
+  definition: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  name: ReadBuilder<TResult>(Func<Builder<PdfPTable>, TResult>)
+  nameWithType: Builder<PdfPTable>.ReadBuilder<TResult>(Func<Builder<PdfPTable>, TResult>)
+  fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.ReadBuilder<TResult>(System.Func<PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>, TResult>)
+  nameWithType.vb: Builder(Of PdfPTable).ReadBuilder(Of TResult)(Func(Of Builder(Of PdfPTable), TResult))
+  fullName.vb: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).ReadBuilder(Of TResult)(System.Func(Of PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable), TResult))
+  name.vb: ReadBuilder(Of TResult)(Func(Of Builder(Of PdfPTable), TResult))
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+    name: ReadBuilder<TResult>
+    nameWithType: Builder<PdfPTable>.ReadBuilder<TResult>
+    fullName: PdfBuilder.Builder<iTextSharp.text.pdf.PdfPTable>.ReadBuilder<TResult>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+    name: ReadBuilder(Of TResult)
+    nameWithType: Builder(Of PdfPTable).ReadBuilder(Of TResult)
+    fullName: PdfBuilder.Builder(Of iTextSharp.text.pdf.PdfPTable).ReadBuilder(Of TResult)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: iTextSharp.text.pdf.PdfPTable
+    name: PdfPTable
+    nameWithType: PdfPTable
+    fullName: iTextSharp.text.pdf.PdfPTable
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: ', '
     nameWithType: ', '
     fullName: ', '
@@ -695,6 +907,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: PdfBuilder.Interfaces
+  commentId: N:PdfBuilder.Interfaces
+  isExternal: false
+  name: PdfBuilder.Interfaces
+  nameWithType: PdfBuilder.Interfaces
+  fullName: PdfBuilder.Interfaces
 - uid: PdfBuilder.Builder`1.Instance
   commentId: P:PdfBuilder.Builder`1.Instance
   isExternal: false
@@ -703,6 +921,22 @@ references:
   fullName: PdfBuilder.Builder<T>.Instance
   nameWithType.vb: Builder(Of T).Instance
   fullName.vb: PdfBuilder.Builder(Of T).Instance
+- uid: PdfBuilder.Builder`1.PageBreakBefore
+  commentId: P:PdfBuilder.Builder`1.PageBreakBefore
+  isExternal: false
+  name: PageBreakBefore
+  nameWithType: Builder<T>.PageBreakBefore
+  fullName: PdfBuilder.Builder<T>.PageBreakBefore
+  nameWithType.vb: Builder(Of T).PageBreakBefore
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakBefore
+- uid: PdfBuilder.Builder`1.PageBreakAfter
+  commentId: P:PdfBuilder.Builder`1.PageBreakAfter
+  isExternal: false
+  name: PageBreakAfter
+  nameWithType: Builder<T>.PageBreakAfter
+  fullName: PdfBuilder.Builder<T>.PageBreakAfter
+  nameWithType.vb: Builder(Of T).PageBreakAfter
+  fullName.vb: PdfBuilder.Builder(Of T).PageBreakAfter
 - uid: PdfBuilder.Builder`1.Set(System.Action{`0})
   commentId: M:PdfBuilder.Builder`1.Set(System.Action{`0})
   isExternal: true
@@ -756,6 +990,85 @@ references:
   - name: T
     nameWithType: T
     fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  commentId: M:PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+  isExternal: true
+  name: SetBuilder(Action<Builder<T>>)
+  nameWithType: Builder<T>.SetBuilder(Action<Builder<T>>)
+  fullName: PdfBuilder.Builder<T>.SetBuilder(System.Action<PdfBuilder.Builder<T>>)
+  nameWithType.vb: Builder(Of T).SetBuilder(Action(Of Builder(Of T)))
+  fullName.vb: PdfBuilder.Builder(Of T).SetBuilder(System.Action(Of PdfBuilder.Builder(Of T)))
+  name.vb: SetBuilder(Action(Of Builder(Of T)))
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+    name: SetBuilder
+    nameWithType: Builder<T>.SetBuilder
+    fullName: PdfBuilder.Builder<T>.SetBuilder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})
+    name: SetBuilder
+    nameWithType: Builder(Of T).SetBuilder
+    fullName: PdfBuilder.Builder(Of T).SetBuilder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: )
     nameWithType: )
     fullName: )
@@ -821,6 +1134,97 @@ references:
   - name: T
     nameWithType: T
     fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  commentId: M:PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+  isExternal: true
+  name: ReadBuilder<TResult>(Func<Builder<T>, TResult>)
+  nameWithType: Builder<T>.ReadBuilder<TResult>(Func<Builder<T>, TResult>)
+  fullName: PdfBuilder.Builder<T>.ReadBuilder<TResult>(System.Func<PdfBuilder.Builder<T>, TResult>)
+  nameWithType.vb: Builder(Of T).ReadBuilder(Of TResult)(Func(Of Builder(Of T), TResult))
+  fullName.vb: PdfBuilder.Builder(Of T).ReadBuilder(Of TResult)(System.Func(Of PdfBuilder.Builder(Of T), TResult))
+  name.vb: ReadBuilder(Of TResult)(Func(Of Builder(Of T), TResult))
+  spec.csharp:
+  - uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+    name: ReadBuilder<TResult>
+    nameWithType: Builder<T>.ReadBuilder<TResult>
+    fullName: PdfBuilder.Builder<T>.ReadBuilder<TResult>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})
+    name: ReadBuilder(Of TResult)
+    nameWithType: Builder(Of T).ReadBuilder(Of TResult)
+    fullName: PdfBuilder.Builder(Of T).ReadBuilder(Of TResult)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: PdfBuilder.Builder`1
+    name: Builder
+    nameWithType: Builder
+    fullName: PdfBuilder.Builder
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: ', '
     nameWithType: ', '
     fullName: ', '

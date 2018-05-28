@@ -5,11 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.Builder-1.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.Builder-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Builder-1.html",
-          "hash": "fM6JCLXRVgsymw5nLxZz6g=="
+          "hash": "1NUCb8E/8qnRhRLE92QjFQ=="
         }
       },
       "is_incremental": true,
@@ -17,11 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.ImageBuilder.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.ImageBuilder.yml",
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.ImageBuilder.html",
-          "hash": "i0b6mmeNbd6WuKW64h2aQw=="
+          "hash": "Kp2qOJQA/4ryizQ3Jnrwzw=="
         }
       },
       "is_incremental": true,
@@ -29,11 +29,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.Interfaces.IPdfRenderer.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.Interfaces.IITextSharpInstance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.Interfaces.IITextSharpInstance.html",
+          "hash": "qUCsZRZLOzFlMHtfhOBBWQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/api/PdfBuilder.Interfaces.IPdfRenderer.yml",
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Interfaces.IPdfRenderer.html",
-          "hash": "bc2WYZ+fpUHmB8zt/2czeQ=="
+          "hash": "AXneUDxan0h0VZl8MiUS7A=="
         }
       },
       "is_incremental": true,
@@ -41,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.Interfaces.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.Interfaces.yml",
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Interfaces.html",
-          "hash": "MieaRXfXrLwiJb2azPhfVQ=="
+          "hash": "xh3WGrUKo6Td22J8s/Bs/g=="
         }
       },
       "is_incremental": true,
@@ -53,11 +65,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.PdfBuilder.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.Pdf.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PdfBuilder.PdfBuilder.html",
-          "hash": "Abg4d11WbdWEhzkBQT41AQ=="
+          "relative_path": "api/PdfBuilder.Pdf.html",
+          "hash": "rKZHQKbSUEJJffJTDfoX3A=="
         }
       },
       "is_incremental": true,
@@ -65,11 +77,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "obj/api/PdfBuilder.yml",
+      "source_relative_path": "../docs/api/PdfBuilder.TableBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.TableBuilder.html",
+          "hash": "xY5TgI0OXN/u3WENhfpBIQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/api/PdfBuilder.TableRowBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PdfBuilder.TableRowBuilder.html",
+          "hash": "RoiZy5u7Ny12K7Ol5AOGow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../docs/api/PdfBuilder.yml",
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.html",
-          "hash": "qlWuqSJhmqSqdwUBhAO0Fg=="
+          "hash": "InFOADsKAJVb4pcdINRu7Q=="
         }
       },
       "is_incremental": true,
@@ -77,11 +113,59 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "obj/api/toc.yml",
+      "source_relative_path": "../docs/api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ysgVtVuTVqNe9yWPQTge6A=="
+          "hash": "Yp7w/HvVc68wWG6g72qX9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "BVa39ObF3oGFPTA5e/e1sg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../docs/articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "mQmEJrf10/io8XqH+BS04w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "SO1UwyPhh8rvGddiGyUmlw=="
         }
       },
       "is_incremental": false,
@@ -97,7 +181,11 @@
       "processors": {
         "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {

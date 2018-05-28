@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Builder&lt;T&gt;
    ">
-    <meta name="generator" content="docfx 2.35.4.0">
+    <meta name="generator" content="docfx 2.36.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
   
   <h1 id="PdfBuilder_Builder_1" data-uid="PdfBuilder.Builder`1" class="text-break">Class Builder&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Wrapper around and underlying instance of T where T is the type of iTextSharp instance</p>
+  <div class="markdown level0 summary"><p>Wrapper around and underlying instance of T where T is an IElement</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -81,7 +81,13 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Builder&lt;T&gt;</span></div>
       <div class="level2"><a class="xref" href="PdfBuilder.ImageBuilder.html">ImageBuilder</a></div>
-      <div class="level2"><a class="xref" href="PdfBuilder.PdfBuilder.html">PdfBuilder</a></div>
+      <div class="level2"><a class="xref" href="PdfBuilder.Pdf.html">Pdf</a></div>
+      <div class="level2"><a class="xref" href="PdfBuilder.TableBuilder.html">TableBuilder</a></div>
+      <div class="level2"><a class="xref" href="PdfBuilder.TableRowBuilder.html">TableRowBuilder</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="PdfBuilder.Interfaces.IITextSharpInstance.html">IITextSharpInstance</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -111,7 +117,7 @@
   <h6><strong>Assembly</strong>: PdfBuilder.dll</h6>
   <h5 id="PdfBuilder_Builder_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Builder&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Builder&lt;T&gt; : IITextSharpInstance</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -135,7 +141,7 @@
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1__ctor.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L22">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L50">View Source</a>
   </span>
   <a id="PdfBuilder_Builder_1__ctor_" data-uid="PdfBuilder.Builder`1.#ctor*"></a>
   <h4 id="PdfBuilder_Builder_1__ctor" data-uid="PdfBuilder.Builder`1.#ctor">Builder()</h4>
@@ -152,7 +158,7 @@ its default constructor.</p>
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1__ctor__0_.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L55">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L83">View Source</a>
   </span>
   <a id="PdfBuilder_Builder_1__ctor_" data-uid="PdfBuilder.Builder`1.#ctor*"></a>
   <h4 id="PdfBuilder_Builder_1__ctor__0_" data-uid="PdfBuilder.Builder`1.#ctor(`0)">Builder(T)</h4>
@@ -186,7 +192,7 @@ its default constructor.</p>
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1__ctor_System_Object___.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.%23ctor(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L34">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L62">View Source</a>
   </span>
   <a id="PdfBuilder_Builder_1__ctor_" data-uid="PdfBuilder.Builder`1.#ctor*"></a>
   <h4 id="PdfBuilder_Builder_1__ctor_System_Object___" data-uid="PdfBuilder.Builder`1.#ctor(System.Object[])">Builder(Object[])</h4>
@@ -222,15 +228,16 @@ its default constructor.</p>
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_Instance.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L16">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L23">View Source</a>
   </span>
   <a id="PdfBuilder_Builder_1_Instance_" data-uid="PdfBuilder.Builder`1.Instance*"></a>
   <h4 id="PdfBuilder_Builder_1_Instance" data-uid="PdfBuilder.Builder`1.Instance">Instance</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The underlying instance of <see cref="!:T"></see></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Instance { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public dynamic Instance { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,7 +249,71 @@ its default constructor.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">T</span></td>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_PageBreakAfter.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.PageBreakAfter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L40">View Source</a>
+  </span>
+  <a id="PdfBuilder_Builder_1_PageBreakAfter_" data-uid="PdfBuilder.Builder`1.PageBreakAfter*"></a>
+  <h4 id="PdfBuilder_Builder_1_PageBreakAfter" data-uid="PdfBuilder.Builder`1.PageBreakAfter">PageBreakAfter</h4>
+  <div class="markdown level1 summary"><p>Page break after the Builder instance.
+The default is set to false (no page break)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PageBreakAfter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_PageBreakBefore.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.PageBreakBefore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L30">View Source</a>
+  </span>
+  <a id="PdfBuilder_Builder_1_PageBreakBefore_" data-uid="PdfBuilder.Builder`1.PageBreakBefore*"></a>
+  <h4 id="PdfBuilder_Builder_1_PageBreakBefore" data-uid="PdfBuilder.Builder`1.PageBreakBefore">PageBreakBefore</h4>
+  <div class="markdown level1 summary"><p>Page break before the Builder instance
+The default is set to false (no page break)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool PageBreakBefore { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -251,19 +322,19 @@ its default constructor.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_ReadProperty_System_Func__0_System_Object__.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.ReadProperty(System.Func%7B%600%2CSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_ReadBuilder__1_System_Func_PdfBuilder_Builder__0____0__.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.ReadBuilder%60%601(System.Func%7BPdfBuilder.Builder%7B%600%7D%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L99">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L158">View Source</a>
   </span>
-  <a id="PdfBuilder_Builder_1_ReadProperty_" data-uid="PdfBuilder.Builder`1.ReadProperty*"></a>
-  <h4 id="PdfBuilder_Builder_1_ReadProperty_System_Func__0_System_Object__" data-uid="PdfBuilder.Builder`1.ReadProperty(System.Func{`0,System.Object})">ReadProperty(Func&lt;T, Object&gt;)</h4>
-  <div class="markdown level1 summary"><p>Read properties of T</p>
+  <a id="PdfBuilder_Builder_1_ReadBuilder_" data-uid="PdfBuilder.Builder`1.ReadBuilder*"></a>
+  <h4 id="PdfBuilder_Builder_1_ReadBuilder__1_System_Func_PdfBuilder_Builder__0____0__" data-uid="PdfBuilder.Builder`1.ReadBuilder``1(System.Func{PdfBuilder.Builder{`0},``0})">ReadBuilder&lt;TResult&gt;(Func&lt;Builder&lt;T&gt;, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Read properties of this <a class="xref" href="PdfBuilder.Builder-1.html">Builder&lt;T&gt;</a> instance</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object ReadProperty(Func&lt;T, object&gt; cb)</code></pre>
+    <pre><code class="lang-csharp hljs">public TResult ReadBuilder&lt;TResult&gt;(Func&lt;Builder&lt;T&gt;, TResult&gt; cb)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -276,7 +347,78 @@ its default constructor.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="PdfBuilder.Builder-1.html">Builder</a>&lt;T&gt;, TResult&gt;</td>
+        <td><span class="parametername">cb</span></td>
+        <td><p>Callback to execute on <span class="xref">System.Func&lt;T, TResult&gt;</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TResult</span></td>
+        <td><p>The return value of the callback</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PdfBuilder_Builder_1_ReadBuilder__1_System_Func_PdfBuilder_Builder__0____0___examples">Examples</h5>
+  <pre><code>To return a value from this Builder instance:
+
+var builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);
+return builder.ReadProperty(p => p.PageBreakAfter);</code></pre>
+
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_ReadProperty__1_System_Func__0___0__.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.ReadProperty%60%601(System.Func%7B%600%2C%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L138">View Source</a>
+  </span>
+  <a id="PdfBuilder_Builder_1_ReadProperty_" data-uid="PdfBuilder.Builder`1.ReadProperty*"></a>
+  <h4 id="PdfBuilder_Builder_1_ReadProperty__1_System_Func__0___0__" data-uid="PdfBuilder.Builder`1.ReadProperty``1(System.Func{`0,``0})">ReadProperty&lt;TResult&gt;(Func&lt;T, TResult&gt;)</h4>
+  <div class="markdown level1 summary"><p>Read properties of T</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TResult ReadProperty&lt;TResult&gt;(Func&lt;T, TResult&gt; cb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, TResult&gt;</td>
         <td><span class="parametername">cb</span></td>
         <td><p>Callback to execute on T <span class="xref">System.Func&lt;T, TResult&gt;</span></p>
 </td>
@@ -293,24 +435,39 @@ its default constructor.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td><p><span class="xref">System.Object</span>An instance of an object. Please note that this object will need to explicitly cast into appropriate type</p>
+        <td><span class="xref">TResult</span></td>
+        <td><p>The return value of the callback</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="PdfBuilder_Builder_1_ReadProperty_System_Func__0_System_Object___examples">Examples</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="PdfBuilder_Builder_1_ReadProperty__1_System_Func__0___0___examples">Examples</h5>
   <pre><code>To return a value from T:
 
 var builder = new Builder&lt;Paragraph>(&quot;Some text&quot;);
-return (string)builder.Read(p => p.Content); // Returns &quot;Some text&quot;</code></pre>
+return builder.ReadProperty(p => p.Content); // Returns &quot;Some text&quot;</code></pre>
 
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_Set_System_Action__0__.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.Set(System.Action%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L78">View Source</a>
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L106">View Source</a>
   </span>
   <a id="PdfBuilder_Builder_1_Set_" data-uid="PdfBuilder.Builder`1.Set*"></a>
   <h4 id="PdfBuilder_Builder_1_Set_System_Action__0__" data-uid="PdfBuilder.Builder`1.Set(System.Action{`0})">Set(Action&lt;T&gt;)</h4>
@@ -364,6 +521,59 @@ builder.Set(p =>
         p.FontSize = 12; // The font size for the paragraph has been set to 12
     });</code></pre>
 
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1_SetBuilder_System_Action_PdfBuilder_Builder__0___.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601.SetBuilder(System.Action%7BPdfBuilder.Builder%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L117">View Source</a>
+  </span>
+  <a id="PdfBuilder_Builder_1_SetBuilder_" data-uid="PdfBuilder.Builder`1.SetBuilder*"></a>
+  <h4 id="PdfBuilder_Builder_1_SetBuilder_System_Action_PdfBuilder_Builder__0___" data-uid="PdfBuilder.Builder`1.SetBuilder(System.Action{PdfBuilder.Builder{`0}})">SetBuilder(Action&lt;Builder&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Execute an action on <a class="xref" href="PdfBuilder.Builder-1.html">Builder&lt;T&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Builder&lt;T&gt; SetBuilder(Action&lt;Builder&lt;T&gt;&gt; cb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="PdfBuilder.Builder-1.html">Builder</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">cb</span></td>
+        <td><p>Callback to execute to set properties of the Builder instance <span class="xref">System.Action&lt;T&gt;</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PdfBuilder.Builder-1.html">Builder</a>&lt;T&gt;</td>
+        <td><a class="xref" href="PdfBuilder.Builder-1.html">Builder&lt;T&gt;</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="PdfBuilder.Interfaces.IITextSharpInstance.html">IITextSharpInstance</a>
+  </div>
 </article>
           </div>
           
@@ -375,7 +585,7 @@ builder.Set(p =>
                     <a href="https://github.com/viralogic/PdfBuilder/new/master/apiSpec/new?filename=PdfBuilder_Builder_1.md&amp;value=---%0Auid%3A%20PdfBuilder.Builder%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/viralogic/PdfBuilder/blob/master/PdfBuilder/Builder.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

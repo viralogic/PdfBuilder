@@ -16,5 +16,7 @@
 - uid: PdfBuilder.Interfaces
   name: PdfBuilder.Interfaces
   items:
+  - uid: PdfBuilder.Interfaces.IITextSharpInstance
+    name: IITextSharpInstance
   - uid: PdfBuilder.Interfaces.IPdfRenderer
     name: IPdfRenderer

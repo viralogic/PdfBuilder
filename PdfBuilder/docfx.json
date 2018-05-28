@@ -6,7 +6,7 @@
           "files": [
             "*.csproj"
           ],
-          "cwd": ".",
+          "cwd": "../docs/",
           "exclude": [
             "**/obj/**",
             "**/bin/**",
@@ -14,7 +14,7 @@
           ]
         }
       ],
-      "dest": "../docs/api"
+      "dest": "api"
     }
   ],
   "build": {
@@ -23,7 +23,7 @@
         "files": [
           "api/**.yml"
         ],
-        "cwd": "obj"
+        "cwd": "../docs/"
       },
       {
         "files": [
@@ -32,6 +32,7 @@
           "toc.yml",
           "*.md"
         ],
+        "cwd": "../docs/",
         "exclude": [
           "obj/**",
           "_site/**"
@@ -43,6 +44,7 @@
         "files": [
           "images/**"
         ],
+        "cwd": "../docs",
         "exclude": [
           "obj/**",
           "_site/**"
@@ -50,15 +52,6 @@
       }
     ],
     "overwrite": [
-      {
-        "files": [
-          "apidoc/**.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "_site/**"
-        ]
-      }
     ],
     "dest": "../docs",
     "template": [

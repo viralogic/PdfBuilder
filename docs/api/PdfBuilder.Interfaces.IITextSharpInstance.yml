@@ -1,0 +1,179 @@
+### YamlMime:ManagedReference
+items:
+- uid: PdfBuilder.Interfaces.IITextSharpInstance
+  commentId: T:PdfBuilder.Interfaces.IITextSharpInstance
+  id: IITextSharpInstance
+  parent: PdfBuilder.Interfaces
+  children:
+  - PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  - PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  - PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  langs:
+  - csharp
+  - vb
+  name: IITextSharpInstance
+  nameWithType: IITextSharpInstance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance
+  type: Interface
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IITextSharpInstance.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: IITextSharpInstance
+    path: Interfaces/IITextSharpInstance.cs
+    startLine: 8
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: public interface IITextSharpInstance
+    content.vb: Public Interface IITextSharpInstance
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  id: Instance
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: IITextSharpInstance.Instance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IITextSharpInstance.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: Instance
+    path: Interfaces/IITextSharpInstance.cs
+    startLine: 10
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: dynamic Instance { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly Property Instance As Object
+  overload: PdfBuilder.Interfaces.IITextSharpInstance.Instance*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  id: PageBreakBefore
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
+  langs:
+  - csharp
+  - vb
+  name: PageBreakBefore
+  nameWithType: IITextSharpInstance.PageBreakBefore
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IITextSharpInstance.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: PageBreakBefore
+    path: Interfaces/IITextSharpInstance.cs
+    startLine: 11
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: bool PageBreakBefore { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property PageBreakBefore As Boolean
+  overload: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore*
+  modifiers.csharp:
+  - get
+  - set
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  commentId: P:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  id: PageBreakAfter
+  parent: PdfBuilder.Interfaces.IITextSharpInstance
+  langs:
+  - csharp
+  - vb
+  name: PageBreakAfter
+  nameWithType: IITextSharpInstance.PageBreakAfter
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  type: Property
+  source:
+    remote:
+      path: PdfBuilder/Interfaces/IITextSharpInstance.cs
+      branch: master
+      repo: https://github.com/viralogic/PdfBuilder.git
+    id: PageBreakAfter
+    path: Interfaces/IITextSharpInstance.cs
+    startLine: 12
+  assemblies:
+  - PdfBuilder
+  namespace: PdfBuilder.Interfaces
+  syntax:
+    content: bool PageBreakAfter { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property PageBreakAfter As Boolean
+  overload: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: PdfBuilder.Interfaces
+  commentId: N:PdfBuilder.Interfaces
+  isExternal: false
+  name: PdfBuilder.Interfaces
+  nameWithType: PdfBuilder.Interfaces
+  fullName: PdfBuilder.Interfaces
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.Instance*
+  commentId: Overload:PdfBuilder.Interfaces.IITextSharpInstance.Instance
+  isExternal: false
+  name: Instance
+  nameWithType: IITextSharpInstance.Instance
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.Instance
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore*
+  commentId: Overload:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+  isExternal: false
+  name: PageBreakBefore
+  nameWithType: IITextSharpInstance.PageBreakBefore
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakBefore
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter*
+  commentId: Overload:PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter
+  isExternal: false
+  name: PageBreakAfter
+  nameWithType: IITextSharpInstance.PageBreakAfter
+  fullName: PdfBuilder.Interfaces.IITextSharpInstance.PageBreakAfter

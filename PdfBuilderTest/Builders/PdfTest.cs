@@ -96,7 +96,7 @@ namespace PdfBuilderTest.Builders
             {
                 Directory.CreateDirectory(@"..\..\Files");
             }
-            new Pdf(PageSize.A4).Add(new Builder<Paragraph>("Hello World!")).Save(new HelloWorldRenderer(), fileName);
+            new Pdf(PageSize.A4).Save(new HelloWorldRenderer(), fileName);
             var exists = File.Exists(fileName);
             Assert.IsTrue(File.Exists(fileName));
 
@@ -104,6 +104,58 @@ namespace PdfBuilderTest.Builders
             {
                 var text = System.Text.Encoding.UTF8.GetString(reader.GetPageContent(1));
                 Assert.IsTrue(text.Contains("Hello World!"));
+            }
+
+            if (exists)
+            {
+                File.Delete(fileName);
+            }
+        }
+
+        [TestMethod]
+        public void PageBreakAfterTest()
+        {
+            var fileName = @"..\..\Files\HelloWorldRenderer.pdf";
+            if (!Directory.Exists(@"..\..\Files"))
+            {
+                Directory.CreateDirectory(@"..\..\Files");
+            }
+
+            var firstPage = new Builder<Paragraph>("This is page 1").SetBuilder(b => { b.PageBreakAfter = true; });
+
+            new Pdf(PageSize.A4).Add(firstPage).Save(new HelloWorldRenderer(), fileName);
+            var exists = File.Exists(fileName);
+            Assert.IsTrue(File.Exists(fileName));
+
+            using (var reader = new PdfReader(fileName))
+            {
+                Assert.AreEqual<int>(reader.NumberOfPages, 2);
+            }
+
+            if (exists)
+            {
+                File.Delete(fileName);
+            }
+        }
+
+        public void PageBreakBeforeTest()
+        {
+            var fileName = @"..\..\Files\HelloWorldRenderer.pdf";
+            if (!Directory.Exists(@"..\..\Files"))
+            {
+                Directory.CreateDirectory(@"..\..\Files");
+            }
+
+            var firstPage = new Builder<Paragraph>("This is page 1");
+
+            new Pdf(PageSize.A4).Add(firstPage).Add(new Builder<Paragraph>("This is page 2").SetBuilder(b => { b.PageBreakBefore = true; }))
+                .Save(new HelloWorldRenderer(), fileName);
+            var exists = File.Exists(fileName);
+            Assert.IsTrue(File.Exists(fileName));
+
+            using (var reader = new PdfReader(fileName))
+            {
+                Assert.AreEqual<int>(reader.NumberOfPages, 2);
             }
 
             if (exists)

@@ -19,7 +19,7 @@ namespace PdfBuilder
     {
         private bool _disposed = false;
 
-        private IList<object> _elements;
+        private IList<IITextSharpInstance> _elements;
 
         /// <summary>
         /// The number of elements contained in the PDF instance
@@ -37,7 +37,7 @@ namespace PdfBuilder
         public Pdf(Rectangle pageSize)
         {
             this.Instance = new Document(pageSize);
-            this._elements = new List<object>();
+            this._elements = new List<IITextSharpInstance>();
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace PdfBuilder
         /// var pdf = new Pdf(PageSize.A4);
         /// pdf.Set(p =>
         ///     {
-        ///         p.Add; // The font size for the paragraph has been set to 12
+        ///         p.Alignment = Element.ALIGN_LEFT; // The paragraph is now aligned on left side of page.
         ///     });
         /// </code>
         /// </example>
@@ -65,10 +65,10 @@ namespace PdfBuilder
         /// <summary>
         /// Adds an builder element to the document
         /// </summary>
-        /// <param name="builder"><see cref="Builder{T}"/>An instance of a Builder object</param>
-        public Pdf Add<T>(Builder<T> builder)
+        /// <param name="builder"><see cref="IITextSharpInstance"/>An instance of a Builder object</param>
+        public Pdf Add(IITextSharpInstance builder)
         {
-            this._elements.Add(builder.Instance);
+            this._elements.Add(builder);
             return this;
         }
 
@@ -125,7 +125,15 @@ namespace PdfBuilder
                 this.Instance.Open();
                 foreach(var e in this._elements)
                 {
-                    this.Instance.Add(e as IElement);
+                    if (e.PageBreakBefore)
+                    {
+                        this.Instance.NewPage();
+                    }
+                    this.Instance.Add(e.Instance as IElement);
+                    if (e.PageBreakAfter)
+                    {
+                        this.Instance.NewPage();
+                    }
                 }
                 this.Instance.Close();
             }
