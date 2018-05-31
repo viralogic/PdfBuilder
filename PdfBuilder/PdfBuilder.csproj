@@ -60,6 +60,7 @@
   <ItemGroup>
     <None Include="docfx.json" />
     <None Include="packages.config" />
+    <None Include="PdfBuilder.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />

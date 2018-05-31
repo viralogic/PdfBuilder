@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Builder-1.html",
-          "hash": "1NUCb8E/8qnRhRLE92QjFQ=="
+          "hash": "2t29Q2rzoNBTsC0gF9+ETg=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.ImageBuilder.html",
-          "hash": "Kp2qOJQA/4ryizQ3Jnrwzw=="
+          "hash": "BDIrenLVG2vxOx1OQ5RfsQ=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Interfaces.IITextSharpInstance.html",
-          "hash": "qUCsZRZLOzFlMHtfhOBBWQ=="
+          "hash": "IuebR68wVjKB1RLe2DFbTw=="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Interfaces.IPdfRenderer.html",
-          "hash": "AXneUDxan0h0VZl8MiUS7A=="
+          "hash": "MvAlUn0F9sXnLIXQmGH8BQ=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Interfaces.html",
-          "hash": "xh3WGrUKo6Td22J8s/Bs/g=="
+          "hash": "xHzakMKqUMA/76zj+qnO0A=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.Pdf.html",
-          "hash": "rKZHQKbSUEJJffJTDfoX3A=="
+          "hash": "euql5E+bjiFTHXXbtozUZg=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.TableBuilder.html",
-          "hash": "xY5TgI0OXN/u3WENhfpBIQ=="
+          "hash": "5FliAX2h4pvzvhbDhv7hpQ=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.TableRowBuilder.html",
-          "hash": "RoiZy5u7Ny12K7Ol5AOGow=="
+          "hash": "HZUXkdXmQOpmpy5SP4ADAQ=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PdfBuilder.html",
-          "hash": "InFOADsKAJVb4pcdINRu7Q=="
+          "hash": "jCYdD9IeIu9/bbYxYRmrhg=="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "BVa39ObF3oGFPTA5e/e1sg=="
+          "hash": "KbaQHuOgWbpsBaD6j/RNcQ=="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "mQmEJrf10/io8XqH+BS04w=="
+          "hash": "d7Xr4/fi6EmZwoPcJKTy6g=="
         }
       },
       "is_incremental": true,
@@ -181,14 +181,14 @@
       "processors": {
         "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }
