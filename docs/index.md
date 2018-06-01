@@ -36,6 +36,10 @@ PdfBuilder has been recently released on NuGet as an alpha release.
 
     Install-Package PdfBuilder -Version 1.0.1-alpha
 
+## Documentation
+
+API Documentation can be viewed [here](api/intro.html). There are some very small code examples in the API documentation. Further examples are planned.
+
 ## Contributing
 
 The easiest way to contribute is to send me a message on GitHub telling me what useful feature would make PDF generation easier for you. If you have the time or inclination, please fork and send me a PR with your new feature. 
