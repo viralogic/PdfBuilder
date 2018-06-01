@@ -160,24 +160,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../docs/index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "MjgzZ0kGxhlzAm81WUyOLw=="
+          "hash": "nCsJi/VkOfoCbmALhRN6GA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "../docs/toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "SO1UwyPhh8rvGddiGyUmlw=="
+          "hash": "1sCJDgw6GPfUMpFz88wMbQ=="
         }
       },
       "is_incremental": false,
