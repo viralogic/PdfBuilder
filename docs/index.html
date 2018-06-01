@@ -85,9 +85,16 @@
 </code></pre><p>This is the sole purpose of PdfBuilder.</p>
 <p>This project is still in its infancy and is currently not ready for release. If you would like to contribute, please fork and send me a PR when your changes have been completed. Any contributions would be greatly appreciated.</p>
 <h2 id="quick-start-notes">Quick Start Notes:</h2>
-<p>No installation notes can be given at this time although the plan is to make this library available on Nuget.</p>
-<h2 id="documentation">Documentation</h2>
-<p>API Documentation can be viewed <a href="/api/toc.html">here</a>. There are some very small code examples in the API documentation. Further examples are planned.</p>
+<p>PdfBuilder has been recently released on NuGet as an alpha release.</p>
+<pre><code>Install-Package PdfBuilder -Version 1.0.1-alpha
+</code></pre><h2 id="contributing">Contributing</h2>
+<p>The easiest way to contribute is to send me a message on GitHub telling me what useful feature would make PDF generation easier for you. If you have the time or inclination, please fork and send me a PR with your new feature. </p>
+<p>I started this project just to serve my needs for a work project. So really the features on top of iTextSharp are pretty minimal. Its greatest feature is just being able to code in the fluent style.</p>
+<p>Some ideas include:</p>
+<ul>
+<li>ability to apply styles to a document from a common &quot;style&quot; class. Would be especially useful for tables to avoid having to style each every table cell.</li>
+<li>Render from Markdown templates. The fluent style really seems to make the code appear to just be a really verbose template. It doesn&#39;t seem to far of leap to be able to generate a pdf from a Markdown template and a data model.  </li>
+</ul>
 </article>
           </div>
           
