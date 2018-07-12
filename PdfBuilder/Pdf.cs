@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
-using iTextSharp.text.html.simpleparser;
 using PdfBuilder.Interfaces;
+using PdfBuilder.Handlers;
 
 namespace PdfBuilder
 {
@@ -73,6 +72,24 @@ namespace PdfBuilder
         }
 
         /// <summary>
+        /// Parse html to elements and adds elements to the Pdf
+        /// </summary>
+        /// <param name="html"><see cref="System.String"/>The HTML as string</param>
+        public Pdf AddHtml(string html)
+        {
+            var htmlHandler = new HtmlHandler();
+            using (var sr = new StringReader(html))
+            {
+                XMLWorkerHelper.GetInstance().ParseXHtml(htmlHandler, sr);
+            }
+            foreach(var e in htmlHandler.Elements)
+            {
+                this._elements.Add(new Builder<IElement>(e));
+            }
+            return this;
+        }
+
+        /// <summary>
         /// Renders content on the page using a renderer instance to a given stream
         /// </summary>
         /// <param name="renderer">Instance of object that implements a IPdfRenderer interface<see cref="PdfBuilder.Interfaces.IPdfRenderer"/></param>
@@ -103,15 +120,8 @@ namespace PdfBuilder
         /// <param name="stream">Stream instance used to write HTML text to <see cref="System.IO.Stream"/></param>
         public void RenderHtml(string html, Stream stream)
         {
-            using (var sr = new StringReader(html))
-            {
-                using (var writer = PdfWriter.GetInstance(this.Instance, stream))
-                {
-                    this.Instance.Open();
-                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, this.Instance, sr);
-                    this.Instance.Close();
-                }
-            }
+            this.AddHtml(html);
+            this.Render(stream);
         }
 
         /// <summary>

@@ -13,6 +13,16 @@ namespace PdfBuilderTest.Builders
     [TestClass]
     public class PdfTest
     {
+        private string _testHtml = @"
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>Bruce Fenske</td>
+                        </tr>
+                    </tbody>
+                </table>";
+
         [TestMethod]
         public void AddElementTest()
         {
@@ -25,6 +35,13 @@ namespace PdfBuilderTest.Builders
         {
             var result = new Pdf(PageSize.A4).Add(new Builder<Paragraph>("Hello world!")).ToArray();
             Assert.IsTrue(result.Length > 0);
+        }
+
+        [TestMethod]
+        public void RenderHtmlTest()
+        {
+            var result = new Pdf(PageSize.A4).AddHtml(this._testHtml);
+            Assert.IsTrue(result.Count > 0);
         }
 
         [TestMethod]
