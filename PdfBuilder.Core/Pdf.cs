@@ -120,23 +120,22 @@ namespace PdfBuilder.Core
         /// <param name="stream">Stream instance used to write elements to <see cref="System.IO.Stream"/></param>
         public void Render(Stream stream)
         {
-            using (var writer = PdfWriter.GetInstance(this.Instance, stream))
+            var writer = PdfWriter.GetInstance(this.Instance, stream);
+            this.Instance.Open();
+            foreach (var e in this._elements)
             {
-                this.Instance.Open();
-                foreach (var e in this._elements)
+                if (e.PageBreakBefore)
                 {
-                    if (e.PageBreakBefore)
-                    {
-                        this.Instance.NewPage();
-                    }
-                    this.Instance.Add(e.Instance as IElement);
-                    if (e.PageBreakAfter)
-                    {
-                        this.Instance.NewPage();
-                    }
+                    this.Instance.NewPage();
                 }
-                this.Instance.Close();
+                this.Instance.Add(e.Instance as IElement);
+                if (e.PageBreakAfter)
+                {
+                    this.Instance.NewPage();
+                }
             }
+            this.Instance.Close();
+            writer.Close();
         }
 
         /// <summary>
