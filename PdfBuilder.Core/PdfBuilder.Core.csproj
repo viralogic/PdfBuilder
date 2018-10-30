@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
+    <Description>A wrapper around iTextSharp so that PDFs can be created using a fluent API</Description>
+    <Copyright>2018</Copyright>
+    <PackageProjectUrl>https://github.com/viralogic/PdfBuilder</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/viralogic/PdfBuilder</RepositoryUrl>
+    <PackageTags>iTextSharp PDF Portable Document Format PdfBuilder C# .NET csharp</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

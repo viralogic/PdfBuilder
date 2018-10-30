@@ -5,15 +5,15 @@
 
     <IsPackable>false</IsPackable>
 
-    <PackageTags>iTextSharp PDF Portable Document Format PdfBuilder C# .NET csharp</PackageTags>
+    <PackageTags></PackageTags>
 
-    <RepositoryUrl>https://github.com/viralogic/PdfBuilder</RepositoryUrl>
+    <RepositoryUrl></RepositoryUrl>
 
-    <PackageProjectUrl>https://github.com/viralogic/PdfBuilder</PackageProjectUrl>
+    <PackageProjectUrl></PackageProjectUrl>
 
-    <Copyright>Copyright 2018</Copyright>
+    <Copyright></Copyright>
 
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0</Version>
 
     <Description>A wrapper around iTextSharp so that PDFs can be created using a fluent API</Description>
 
