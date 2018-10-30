@@ -16,6 +16,8 @@
     <Version>1.0.0-alpha</Version>
 
     <Description>A wrapper around iTextSharp so that PDFs can be created using a fluent API</Description>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
