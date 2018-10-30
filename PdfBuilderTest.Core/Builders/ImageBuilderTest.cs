@@ -1,26 +1,30 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PdfBuilder.Core;
+using System.IO;
 using iTextSharp.text;
+using System.Reflection;
 
 namespace PdfBuilderTest.Core.Builders
 {
     [TestClass]
     public class ImageBuilderTest
     {
-        private const string IMG_FILE_PATH = @"..\Images\20180330_110345-COLLAGE_Crop.jpg";
+        private const string IMG_FILE_PATH = @"Images\20180330_110345-COLLAGE_Crop.jpg";
 
         [TestMethod]
         public void LogoTest()
         {
-            var imageBuilder = new ImageBuilder(IMG_FILE_PATH);
+            var imgFile = Path.Combine(Directory.GetCurrentDirectory(), IMG_FILE_PATH);
+            var imageBuilder = new ImageBuilder(imgFile);
             Assert.IsTrue((bool)imageBuilder.ReadProperty(i => i.IsJpeg()));
         }
 
         [TestMethod]
         public void ScaleTest()
         {
-            var imageBuilder = new ImageBuilder(IMG_FILE_PATH);
+            var imgFile = Path.Combine(Directory.GetCurrentDirectory(), IMG_FILE_PATH);
+            var imageBuilder = new ImageBuilder(imgFile);
             var startHeight = (float)imageBuilder.ReadProperty(i => i.ScaledHeight);
             var startWidth = (float)imageBuilder.ReadProperty(i => i.ScaledWidth);
             imageBuilder.Set(i => { i.ScalePercent(60); });

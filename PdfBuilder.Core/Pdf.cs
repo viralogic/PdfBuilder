@@ -1,5 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.html;
+using iTextSharp.text.html.simpleparser;
 using PdfBuilder.Core.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -76,7 +78,15 @@ namespace PdfBuilder.Core
         /// <param name="html"><see cref="System.String"/>The HTML as string</param>
         public Pdf AddHtml(string html)
         {
-            throw new NotImplementedException();
+            using (var reader = new StringReader(html))
+            {
+                var parsedHtmlElements = HtmlWorker.ParseToList(reader, new StyleSheet());
+                foreach (IElement e in parsedHtmlElements)
+                {
+                    this._elements.Add(new Builder<IElement>(e));
+                }
+            }
+            return this;
         }
 
         /// <summary>
